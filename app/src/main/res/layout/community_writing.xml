@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/iv_delete"
+        android:id="@+id/ib_delete"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
