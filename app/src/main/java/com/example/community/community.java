@@ -16,7 +16,7 @@ public class community extends Activity {
         ib_writing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),community_writing.class);
+                Intent intent=new Intent(community.this,community_writing.class);
                 startActivity(intent);
             }
         });
