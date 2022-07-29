@@ -25,6 +25,9 @@
         <activity
             android:name=".community_writing"
             android:label="게시글작성" />
+        <activity
+            android:name=".community_content_list"
+            android:label="검색결과" />
     </application>
 
 </manifest>

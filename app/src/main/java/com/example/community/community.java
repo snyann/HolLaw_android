@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-
 public class community extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
