@@ -20,7 +20,7 @@
 
 
     <Button
-        android:id="@+id/btn_cummunity"
+        android:id="@+id/btn_community"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_representative" />
 
     <Button
-        android:id="@+id/btn_castegory"
+        android:id="@+id/btn_category"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -80,9 +80,9 @@
         android:backgroundTint="#FF9800"
         android:text="최근 개정 법률"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/btn_cummunity"
+        app:layout_constraintBottom_toTopOf="@+id/btn_community"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_castegory" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_category" />
 
     <Button
         android:id="@+id/btn_representative"

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageButton
-        android:id="@+id/ib_search"
+        android:id="@+id/ib_community_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -27,7 +27,7 @@
         android:inputType="textPersonName"
         android:singleLine="false"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toStartOf="@+id/ib_search"
+        app:layout_constraintEnd_toStartOf="@+id/ib_community_search"
         app:layout_constraintStart_toEndOf="@+id/ib_back"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -17,7 +17,7 @@
         android:inputType="textPersonName"
         android:singleLine="false"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toStartOf="@+id/ib_search3"
+        app:layout_constraintEnd_toStartOf="@+id/ib_community_search"
         app:layout_constraintStart_toEndOf="@+id/ib_back3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,7 @@
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <ImageButton
-        android:id="@+id/ib_search3"
+        android:id="@+id/ib_community_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
