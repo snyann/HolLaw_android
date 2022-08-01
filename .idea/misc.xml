@@ -3,8 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/detail.xml" value="0.30364583333333334" />
+=======
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_community_writing2.xml" value="0.18885869565217392" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/chatbot_guideline.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/community.xml" value="0.18" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/community_comtent.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/community_comtent_list.xml" value="0.22" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/community_main.xml" value="0.18" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/community_writing.xml" value="0.1760797342192691" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/detail.xml" value="0.30364583333333334" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/lawyer_first.xml" value="0.25" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/lawyer_main.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/lawyer_second.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/lawyer_third.xml" value="0.15104166666666666" />
+>>>>>>> branch_sh
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/list_item.xml" value="0.30364583333333334" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/writing.xml" value="0.30364583333333334" />
       </map>
