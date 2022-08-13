@@ -11,17 +11,27 @@
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/arrow_background.xml" value="0.289" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/btn_arrow_back.xml" value="0.35" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/custom_btn_g.xml" value="0.1" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/custom_btn_radio.xml" value="0.35" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/custom_btn_y.xml" value="0.196" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/custom_text_radio.xml" value="0.1205" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_baseline_supervisor_account_24.xml" value="0.196" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_domain.xml" value="0.35" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_filter.xml" value="0.1205" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_mypage.xml" value="0.367" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_search.xml" value="0.35" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.35" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/ic_update.xml" value="0.35" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/layer_button_checked.xml" value="0.1955" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/layer_stroke.xml" value="0.35" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/round_background.xml" value="0.35" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/user_background.xml" value="0.35" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/view_background.xml" value="0.35" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_community.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_join.xml" value="0.5" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_join_detail.xml" value="0.25" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_result.xml" value="0.18" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_result_law.xml" value="0.33" />

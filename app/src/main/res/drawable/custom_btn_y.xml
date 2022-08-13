@@ -3,11 +3,11 @@
     <item android:state_pressed="false">
         <shape>
             <!-- 배경 -->
-            <solid android:color="#FFF1DBA2" />
+            <solid android:color="#fadd87" />
             <!-- 테두리 -->
             <stroke
-                android:width="5dp"
-                android:color="#f5c74c" />
+                android:width="3dp"
+                android:color="#FFAC16" />
             <corners
                 android:bottomLeftRadius="250dp"
                 android:bottomRightRadius="250dp"
