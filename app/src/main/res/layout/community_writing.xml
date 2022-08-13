@@ -6,15 +6,15 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/ib_delete"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/x" />
-
+        android:id="@+id/btn_backspace"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#00ffffff"
+        android:src="@mipmap/arrow_foreground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageButton>
     <Button
         android:id="@+id/btn_complete"
         android:layout_width="wrap_content"
