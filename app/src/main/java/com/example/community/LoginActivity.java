@@ -7,17 +7,17 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.community.databinding.FragmentLoginBinding;
+import com.example.community.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    FragmentLoginBinding binding;
+
+    private ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_login);
-
-        binding = FragmentLoginBinding.inflate(getLayoutInflater());
+        setContentView(R.layout.activity_login);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.btnLogin.setOnClickListener(this);

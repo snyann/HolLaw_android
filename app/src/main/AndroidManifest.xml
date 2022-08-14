@@ -29,7 +29,10 @@
         <activity
             android:name=".community_content_list"
             android:label="검색결과" />
->>>>>>> branch_sh
+        <activity
+            android:name=".LoginActivity"
+            android:label="로그인화면"/>
+        >>>>>>> branch_sh
     </application>
 
 </manifest>
