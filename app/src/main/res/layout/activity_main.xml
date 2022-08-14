@@ -11,42 +11,38 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
         android:layout_marginTop="53dp"
-        android:layout_marginEnd="166dp"
         android:text="홀로서다"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/btn_mypage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+ />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="dp"
         android:text="홀로:HolLaw"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"/>
 
     <ImageButton
         android:id="@+id/btn_mypage"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/ic_mypage"
+        android:background="#00ffffff"
+        android:src="@drawable/ic_mypage"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -58,7 +54,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
         app:layout_constraintEnd_toStartOf="@+id/btn_search"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+     >
 
         <ImageButton
             android:id="@+id/btn_filter"
@@ -94,13 +90,10 @@
 
     <ImageButton
         android:id="@+id/btn_search"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="77dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName9"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9"
         app:srcCompat="@drawable/ic_search_black_24dp" />
@@ -255,10 +248,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="67dp"
-
         android:text="우회전"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toStartOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
@@ -271,7 +262,6 @@
         android:layout_marginBottom="67dp"
         android:text="육아휴직"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
         app:layout_constraintStart_toEndOf="@id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
@@ -286,7 +276,6 @@
 
         android:text="임대차"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />

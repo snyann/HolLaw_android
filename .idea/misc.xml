@@ -28,6 +28,7 @@
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/round_background.xml" value="0.35" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/user_background.xml" value="0.35" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/view_background.xml" value="0.35" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_chatbot.xml" value="0.25625" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_community.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_join.xml" value="0.5" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_join_detail.xml" value="0.25" />
@@ -53,7 +54,7 @@
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/lawyer_third.xml" value="0.1" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/list_item.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/precedent_fulltext.xml" value="0.259375" />
-        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/re_revision_law.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/re_revision_law.xml" value="0.33" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/writing.xml" value="0.36614583333333334" />
       </map>
     </option>
