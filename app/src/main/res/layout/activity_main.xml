@@ -226,14 +226,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_work" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button7"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="364dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/custom_btn_g"
-            android:text="Button"
+            android:src="@drawable/chat_bot"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
