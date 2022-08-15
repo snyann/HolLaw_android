@@ -1,41 +1,37 @@
 package com.example.community;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
-<<<<<<< HEAD
 import android.os.Bundle;
-=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
->>>>>>> branch_sh
+
 
 public class MainActivity extends AppCompatActivity {
-
+    private FragmentManager fragmentManager;
+    private Button btn_mypage, btn_register;
+    private EditText et_id, et_password;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
         setContentView(R.layout.activity_main);
-=======
-        setContentView(R.layout.community);
-        ImageButton ib_writing = (ImageButton) findViewById(R.id.ib_writing);
-        ib_writing.setOnClickListener(new View.OnClickListener() {
+
+        ImageButton btn_mypage = findViewById(R.id.btn_mypage);
+        btn_mypage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), community_writing.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });
-        ImageButton ib_community_search = (ImageButton) findViewById(R.id.ib_community_search);
-        ib_community_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), community_content_list.class);
-                startActivity(intent);
-            }
-        });
->>>>>>> branch_sh
+
+
     }
+
 }

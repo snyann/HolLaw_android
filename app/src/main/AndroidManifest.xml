@@ -22,14 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-=======
+
+
         <activity
             android:name=".community_writing"
             android:label="게시글작성" />
         <activity
             android:name=".community_content_list"
             android:label="검색결과" />
->>>>>>> branch_sh
+        <activity
+            android:name=".LoginActivity"
+            android:label="로그인화면" />
+
     </application>
 
 </manifest>
