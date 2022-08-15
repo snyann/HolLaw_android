@@ -16,16 +16,19 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:inputType = "textNoSuggestions"></TextView>
+        android:inputType = "textNoSuggestions">
+    </TextView>
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@mipmap/view_foreground"
         android:background="#DDDDDD"
+        android:src="@drawable/ic_baseline_add_24"
         app:layout_constraintStart_toEndOf="@id/textView"
-        tools:ignore="MissingConstraints"></ImageButton>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+    </ImageButton>
 
     <TextView
         android:id="@+id/textView2"
@@ -35,8 +38,8 @@
         android:text="content"
         android:textSize="15dp"
         android:maxLines="5"
-        android:eclipsize="end"
         app:layout_constraintTop_toBottomOf="@id/textView"
-        tools:ignore="MissingConstraints"></TextView>
+        tools:ignore="MissingConstraints">
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

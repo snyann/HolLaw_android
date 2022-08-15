@@ -12,7 +12,7 @@ public class community_content_list extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community_content_list);
-        ImageButton ib_back=(ImageButton) findViewById(R.id.ib_back);
+        ImageButton ib_back=(ImageButton) findViewById(R.id.btn_backspace);
         ib_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

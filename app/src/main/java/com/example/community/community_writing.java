@@ -10,7 +10,7 @@ public class community_writing extends Activity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community_writing);
-        ImageButton ib_delete=(ImageButton) findViewById(R.id.ib_delete);
+        ImageButton ib_delete=(ImageButton) findViewById(R.id.btn_backspace);
         ib_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
