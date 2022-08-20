@@ -34,6 +34,14 @@
             android:name=".LoginActivity"
             android:label="로그인화면" />
 
+        <activity
+            android:name="com.example.community.ResultActivity"
+            />
+
+        <activity
+            android:name="com.example.community.CommunityActivity"
+            />
+
     </application>
 
 </manifest>
