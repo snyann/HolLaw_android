@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "214885508754",
+    "project_id": "hollawandroid",
+    "storage_bucket": "hollawandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214885508754:android:2e5bfb6da334fabc7a284b",
+        "android_client_info": {
+          "package_name": "com.example.HolLaw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214885508754-aer026jfvnqqa74c173255jac8mtkt4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_jBr2lPlwaDhB8sVVFBIF0a6ncocANGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214885508754-aer026jfvnqqa74c173255jac8mtkt4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
