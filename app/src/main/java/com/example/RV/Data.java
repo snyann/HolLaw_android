@@ -3,6 +3,7 @@ package com.example.RV;
 public class Data {
     private String title;
     private String content;
+    private int iv_comment;
 
     public String getTitle() {
         return title;
