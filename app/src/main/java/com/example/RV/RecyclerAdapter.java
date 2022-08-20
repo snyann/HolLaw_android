@@ -1,4 +1,4 @@
-package com.example.cns_ny;
+package com.example.RV;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.re_revision_law, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_recent, parent, false);
         return new ItemViewHolder(view);
     }
 

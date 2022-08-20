@@ -14,7 +14,9 @@
         android:background="#00ffffff"
         android:src="@drawable/btn_arrow_back"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageButton>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageButton>
 
     <ImageButton
         android:id="@+id/btn_mypage"
@@ -62,6 +64,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="110dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_keyword"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

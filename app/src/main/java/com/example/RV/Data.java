@@ -1,4 +1,4 @@
-package com.example.cns_ny;
+package com.example.RV;
 
 public class Data {
     private String title;

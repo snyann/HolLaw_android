@@ -218,7 +218,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="70dp"
             android:background="@drawable/custom_btn_y"
             android:text="커뮤니티"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -227,11 +227,12 @@
             app:layout_constraintTop_toBottomOf="@id/btn_work" />
 
         <ImageButton
-            android:id="@+id/button7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/btn_chatbot"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/chat_bot"
+            android:src="@drawable/ic_chat_bot"
+            android:background="@drawable/custom_btn_g"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_community" />
