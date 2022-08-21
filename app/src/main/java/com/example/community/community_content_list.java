@@ -11,8 +11,8 @@ public class community_content_list extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_content);
-        ImageButton ib_back=(ImageButton) findViewById(R.id.btn_backspace);
+        setContentView(R.layout.fragment_community_content_list);
+        ImageButton ib_back=(ImageButton) findViewById(R.id.ib_back);
         ib_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

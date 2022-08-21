@@ -10,7 +10,7 @@ public class community extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community);
+        setContentView(R.layout.fragment_community);
         ImageButton ib_writing = (ImageButton) findViewById(R.id.ib_writing);
         ib_writing.setOnClickListener(new View.OnClickListener() {
             @Override
