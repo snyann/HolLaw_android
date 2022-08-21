@@ -37,6 +37,16 @@
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/mipmap-anydpi-v26/CNS_arrow.xml" value="0.2585" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/mipmap-anydpi-v26/CNS_arrow_round.xml" value="0.2585" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_community.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_main.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content_list.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_keyword.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_recent.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_transit_field.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_community_content_list.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_content.xml" value="0.21422101449275363" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/keyword_recycler.xml" value="0.1875" />
       </map>
     </option>
   </component>
