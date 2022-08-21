@@ -7,6 +7,8 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.community.databinding.ActivityLoginBinding;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ActivityLoginBinding binding;

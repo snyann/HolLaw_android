@@ -8,6 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CommunityActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community);
+        setContentView(R.layout.fragment_community);
     }
 }
