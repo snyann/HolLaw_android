@@ -1,4 +1,3 @@
-package com.example.community;
+package com.example.community
 
-public class community_content {
-}
+class community_content 

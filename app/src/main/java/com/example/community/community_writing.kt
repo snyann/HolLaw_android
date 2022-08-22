@@ -1,21 +1,16 @@
-package com.example.community;
+package com.example.community
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
+import android.app.Activity
+import android.os.Bundle
+import android.view.View
+import com.example.community.R
+import android.widget.ImageButton
 
-public class community_writing extends Activity {
-    @Override
-    protected void onCreate( Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.community_writing);
-        ImageButton ib_delete=(ImageButton) findViewById(R.id.btn_backspace);
-        ib_delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+class community_writing : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.community_writing)
+        val ib_delete = findViewById<View>(R.id.btn_backspace) as ImageButton
+        ib_delete.setOnClickListener { finish() }
     }
 }
