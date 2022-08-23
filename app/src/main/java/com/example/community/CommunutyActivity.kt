@@ -9,7 +9,7 @@ import android.view.View
 import com.example.community.community_writing
 import com.example.community.community_content_list
 
-class community : Activity() {
+class CommunutyActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_community)
