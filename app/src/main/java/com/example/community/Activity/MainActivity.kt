@@ -1,18 +1,14 @@
-package com.example.community
+package com.example.community.Activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.widget.EditText
-import android.os.Bundle
-import com.example.community.R
-import android.widget.ImageButton
 import android.content.Intent
+import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
-import com.example.community.LoginActivity
-import com.example.community.ResultActivity
-import com.example.community.CommunityActivity
-import com.example.community.ChatbotActivity
+import com.example.community.R
 
 class MainActivity : AppCompatActivity() {
     private val fragmentManager: FragmentManager? = null

@@ -1,14 +1,15 @@
-package com.example.community
+package com.example.community.Activity
 
-import android.content.ContentValues.TAG
+import android.content.ContentValues
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.MySharedPreferences
+import com.example.community.R
 import com.example.community.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -46,16 +47,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun login(et_id: String, et_pwd: String, myContext:Context) {
+    private fun login(et_id: String, et_pwd: String, myContext: Context) {
         //firebase연결
         firebaseAuth.signInWithEmailAndPassword(et_id, et_pwd)
             .addOnCompleteListener(
             this@LoginActivity
         ){ task ->
                 if(task.isSuccessful){
-                    Log.d(TAG, "signInWithEmail:success")
+                    Log.d(ContentValues.TAG, "signInWithEmail:success")
 
-                    MySharedPreferences.setUserId(myContext,et_id, et_pwd)
+                    MySharedPreferences.setUserId(myContext, et_id, et_pwd)
 
                     if(myContext == this@LoginActivity) {
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
@@ -65,8 +66,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     }
 
                 } else { // 로그인 오류 시
-                    Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(this@LoginActivity, "오류가 발생했습니다.\n다시 시도해주세요", Toast.LENGTH_SHORT)
+                    Log.w(ContentValues.TAG, "signInWithEmail:failure", task.exception)
+                    Toast.makeText(this@LoginActivity, "로그인 정보 오류.\n다시 시도해주세요", Toast.LENGTH_SHORT)
                         .show()
                 }
 
@@ -76,5 +77,3 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }
 
     }
-
-

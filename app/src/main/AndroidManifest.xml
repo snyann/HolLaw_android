@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Community"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,13 +29,13 @@
             android:name=".community_content_list"
             android:label="검색결과" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity.LoginActivity"
             android:label="로그인화면" />
         <activity
-            android:name=".JoinActivity"
+            android:name=".Activity.JoinActivity"
             android:label="회원가입" />
         <activity
-            android:name=".ChatbotActivity"
+            android:name=".Activity.ChatbotActivity"
             android:label="챗봇서비스" />
     </application>
 

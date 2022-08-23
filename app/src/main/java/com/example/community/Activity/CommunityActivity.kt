@@ -1,7 +1,7 @@
-package com.example.community
+package com.example.community.Activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.community.R
 
 class CommunityActivity : AppCompatActivity() {

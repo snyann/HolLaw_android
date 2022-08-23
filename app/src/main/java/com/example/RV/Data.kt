@@ -1,23 +1,18 @@
-package com.example.RV;
+package com.example.RV
 
-public class Data {
-    private String title;
-    private String content;
-    private int iv_comment;
+import androidx.recyclerview.widget.RecyclerView
+import com.example.RV.RecyclerAdapter.ItemViewHolder
+import android.view.ViewGroup
+import android.view.LayoutInflater
+import com.example.community.R
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.example.RV.RecyclerAdapter
+import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
+class Data {
+    var title: String? = null
+    var content: String? = null
+    private val iv_comment = 0
 }
