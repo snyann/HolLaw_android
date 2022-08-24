@@ -11,7 +11,6 @@ class RV_MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         val adapter = LawAdapter(LawList.lawList)
-        recyclerView.adapter = adapter
 
     }
 }
