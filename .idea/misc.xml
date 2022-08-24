@@ -47,6 +47,23 @@
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_community_content_list.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_content.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/keyword_recycler.xml" value="0.1875" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_chatbot.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_join.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_main.xml" value="0.2803442028985507" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_result.xml" value="0.2803442028985507" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_result_law.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/actvity_keyword.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community.xml" value="0.2803442028985507" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content_list.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_full_law.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_full_precedent.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_keyword.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_recent.xml" value="0.15625" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_transit_field.xml" value="0.2" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_community_content_list.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_keyword.xml" value="0.25" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/lawyer_first.xml" value="0.21467391304347827" />
       </map>
     </option>
   </component>

@@ -1,25 +1,25 @@
-package com.example.community;
+package com.example.community
 
-import android.os.Bundle;
-import android.view.View;
+import android.app.Activity
+import android.os.Bundle
+import com.example.community.R
+import android.widget.ImageButton
+import android.content.Intent
+import android.view.View
+import com.example.community.community_writing
+import com.example.community.community_content_list
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.EditText
+import com.example.community.LoginActivity
+import com.example.community.ResultActivity
+import com.example.community.CommunityActivity
+import com.example.community.JoinActivity
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.community.databinding.ActivityLoginBinding;
-
-public class JoinActivity extends AppCompatActivity implements View.OnClickListener{
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join);
-
-
+class JoinActivity : AppCompatActivity(), View.OnClickListener {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_join)
     }
 
-    @Override
-    public void onClick(View view) {
-
-    }
+    override fun onClick(view: View) {}
 }

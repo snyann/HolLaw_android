@@ -1,4 +1,3 @@
-package com.example.community;
+package com.example.community
 
-public class lawyer_third {
-}
+class lawyer_third 

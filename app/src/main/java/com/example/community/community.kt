@@ -1,33 +1,33 @@
-package com.example.community;
+package com.example.community
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
+import android.app.Activity
+import android.os.Bundle
+import com.example.community.R
+import android.widget.ImageButton
+import android.content.Intent
+import android.view.View
+import com.example.community.community_writing
+import com.example.community.community_content_list
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.EditText
+import com.example.community.LoginActivity
+import com.example.community.ResultActivity
+import com.example.community.CommunityActivity
+import com.example.community.JoinActivity
 
-public class community extends Activity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_community);
-        ImageButton ib_writing = (ImageButton) findViewById(R.id.ib_writing);
-        ib_writing.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), community_writing.class);
-                startActivity(intent);
-            }
-        });
-        ImageButton ib_community_search = (ImageButton) findViewById(R.id.ib_community_search);
-        ib_community_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), community_content_list.class);
-                startActivity(intent);
-            }
-        });
-        };
+class community : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_community)
+        val ib_writing = findViewById<View>(R.id.ib_writing) as ImageButton
+        ib_writing.setOnClickListener {
+            val intent = Intent(applicationContext, community_writing::class.java)
+            startActivity(intent)
+        }
+        val ib_community_search = findViewById<View>(R.id.ib_community_search) as ImageButton
+        ib_community_search.setOnClickListener {
+            val intent = Intent(applicationContext, community_content_list::class.java)
+            startActivity(intent)
+        }
     }
-
-
+}

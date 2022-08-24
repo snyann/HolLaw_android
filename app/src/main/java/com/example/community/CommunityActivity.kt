@@ -1,13 +1,22 @@
-package com.example.community;
+package com.example.community
 
-import android.os.Bundle;
+import android.app.Activity
+import android.os.Bundle
+import com.example.community.R
+import android.widget.ImageButton
+import android.content.Intent
+import com.example.community.community_writing
+import com.example.community.community_content_list
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.EditText
+import com.example.community.LoginActivity
+import com.example.community.ResultActivity
+import com.example.community.CommunityActivity
+import com.example.community.JoinActivity
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-public class CommunityActivity extends AppCompatActivity {
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_community);
+class CommunityActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_community)
     }
 }
