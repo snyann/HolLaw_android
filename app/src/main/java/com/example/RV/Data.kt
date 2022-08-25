@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import com.example.community.R
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.RV.RecyclerAdapter
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 
