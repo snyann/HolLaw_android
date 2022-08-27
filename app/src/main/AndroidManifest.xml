@@ -37,6 +37,9 @@
         <activity
             android:name=".Activity.ChatbotActivity"
             android:label="챗봇서비스" />
+        <activity
+            android:name=".Activity.ResultActivity"
+            android:label="검색결과" />
     </application>
 
 </manifest>
