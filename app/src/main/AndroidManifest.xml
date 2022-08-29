@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".community_writing"
+            android:name=".Activity.WritingActivity"
             android:label="게시글작성" />
         <activity
             android:name=".community_content_list"

@@ -5,8 +5,12 @@ import android.os.Bundle
 import android.view.View
 import com.example.community.R
 import android.widget.ImageButton
+import com.google.firebase.auth.FirebaseAuth
 
 class community_content_list : Activity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_community_content_list)

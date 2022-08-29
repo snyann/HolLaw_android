@@ -42,6 +42,7 @@
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_login.xml" value="0.13855116514690982" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_main.xml" value="0.24456521739130435" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/actvity_keyword.xml" value="0.2767210144927536" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/community_writing.xml" value="0.25" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content_list.xml" value="0.21422101449275363" />
@@ -52,6 +53,7 @@
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_community_content_list.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_content.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/keyword_recycler.xml" value="0.1875" />
+        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/lawyer_first.xml" value="0.15806159420289856" />
       </map>
     </option>
   </component>
