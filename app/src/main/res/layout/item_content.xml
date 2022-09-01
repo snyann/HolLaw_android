@@ -8,7 +8,6 @@
     android:background="@color/light_gray"
     >
 
-
     <TextView
         android:id="@+id/tv_titlelist"
         android:layout_width="0dp"

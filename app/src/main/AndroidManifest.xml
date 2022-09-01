@@ -40,6 +40,9 @@
         <activity
             android:name=".Activity.ResultActivity"
             android:label="검색결과" />
+        <activity
+            android:name=".Activity.CommunityActivity"
+            android:label="커뮤니티" />
     </application>
 
 </manifest>
