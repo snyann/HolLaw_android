@@ -8,7 +8,7 @@ import com.example.community.R
 class ChatbotActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chatbot)
+        setContentView(R.layout.activity_chatbot2)
     }
 
     override fun onClick(view: View) {}

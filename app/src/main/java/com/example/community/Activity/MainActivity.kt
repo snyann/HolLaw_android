@@ -2,6 +2,7 @@ package com.example.community.Activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -18,10 +19,12 @@ import com.example.models.Message
 import com.google.api.gax.core.FixedCredentialsProvider
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.auth.oauth2.ServiceAccountCredentials
-import com.google.cloud.dialogflow.v2.SessionName
-import com.google.cloud.dialogflow.v2.SessionsClient
+import com.google.cloud.dialogflow.v2.*
+import java.io.InputStream
 import java.util.*
 import kotlin.collections.ArrayList
+import com.google.common.collect.Lists;
+
 
 
 class MainActivity : AppCompatActivity(), BotReply {
@@ -37,30 +40,6 @@ class MainActivity : AppCompatActivity(), BotReply {
     private var sessionName: SessionName? = null
     private val uuid: String = UUID.randomUUID().toString()
     private val TAG = "mainactivity"
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        chatView = findViewById(R.id.chatView)
-        editMessage = findViewById(R.id.et_searchwindow)
-        btnSend = findViewById(R.id.btn_send)
-        chatAdapter = ChatAdapter(messageList, this)
-        chatView.setAdapter(chatAdapter)
-        btnSend.setOnClickListener(View.OnClickListener {
-            val message = editMessage.getText().toString()
-            if (!message.isEmpty()) {
-                messageList.add(Message(message, false))
-                editMessage.setText("")
-                sendMessageToBot(message)
-                Objects.requireNonNull(chatView.getAdapter()).notifyDataSetChanged()
-                Objects.requireNonNull(chatView.getLayoutManager())
-                    .scrollToPosition(messageList.size - 1)
-            } else {
-                Toast.makeText(this@MainActivity, "Please enter text!", Toast.LENGTH_SHORT).show()
-            }
-        })
-        setUpBot()
-    }
 
     private fun setUpBot() {
         try {
@@ -86,14 +65,14 @@ class MainActivity : AppCompatActivity(), BotReply {
         SendMessageInBg(this, sessionName, sessionsClient, input).execute()
     }
 
-    fun callback(returnResponse: DetectIntentResponse?) {
+    override fun callback(returnResponse: DetectIntentResponse?) {
         if (returnResponse != null) {
             val botReply: String = returnResponse.getQueryResult().getFulfillmentText()
             if (!botReply.isEmpty()) {
                 messageList.add(Message(botReply, true))
-                chatAdapter.notifyDataSetChanged()
+                chatAdapter?.notifyDataSetChanged()
                 Objects.requireNonNull(chatView!!.layoutManager)
-                    .scrollToPosition(messageList.size - 1)
+                    ?.scrollToPosition(messageList.size - 1)
             } else {
                 Toast.makeText(this, "something went wrong", Toast.LENGTH_SHORT).show()
             }
@@ -133,5 +112,25 @@ class MainActivity : AppCompatActivity(), BotReply {
             val intent = Intent(applicationContext, ChatbotActivity::class.java)
             startActivity(intent)
         }
+
+        val chatView = findViewById<View>(R.id.chatView) as RecyclerView
+        val editMessage = findViewById<View>(R.id.et_searchwindow) as EditText
+        val btnSend = findViewById<View>(R.id.btn_send) as Button
+        chatAdapter = ChatAdapter(messageList, this)
+        chatView.setAdapter(chatAdapter)
+        btnSend.setOnClickListener(View.OnClickListener {
+            val message = editMessage.getText().toString()
+            if (!message.isEmpty()) {
+                messageList.add(Message(message, false))
+                editMessage.setText("")
+                sendMessageToBot(message)
+                Objects.requireNonNull(chatView.getAdapter()).notifyDataSetChanged()
+                Objects.requireNonNull(chatView.getLayoutManager())
+                    ?.scrollToPosition(messageList.size - 1)
+            } else {
+                Toast.makeText(this@MainActivity, "텍스트를 입력해 주세요", Toast.LENGTH_SHORT).show()
+            }
+        })
+        setUpBot()
     }
 }

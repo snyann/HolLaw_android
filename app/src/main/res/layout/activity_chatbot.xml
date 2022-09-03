@@ -38,12 +38,11 @@
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:backgroundTint="#FF9800"
         android:text="키워드 검색"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        tools:layout_editor_absoluteY="563dp" />
 
     <Button
         android:id="@+id/btn_chatbot"
@@ -63,13 +62,12 @@
         android:id="@+id/btn_category"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FF9800"
         android:text="분야별 카테고리"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        tools:layout_editor_absoluteY="563dp" />
 
     <Button
         android:id="@+id/btn_recent"
@@ -97,45 +95,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_keyword" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatView"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_keyword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:stackFromEnd="true"
+        tools:itemCount="2"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="50dp"
+        tools:listitem="@layout/adapter_message_one" >
 
-        <EditText
-            android:id="@+id/et_searchwindow"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="검색어를 입력해 주세요."
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_send"
-            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.recyclerview.widget.RecyclerView>
 
-        <Button
-            android:id="@+id/btn_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="#FFC107"
-            android:text="전송"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <EditText
+        android:id="@+id/et_searchwindow"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="검색어를 입력해 주세요."
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="50dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFC107"
+        android:text="전송"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="499dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
