@@ -1,20 +1,12 @@
 package com.example.community.Activity
 
 import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import com.example.community.R
-import android.widget.ImageButton
-import android.widget.Toast
-import com.example.RV.PostDao
-import com.example.community.databinding.ActivityCommunityBinding
+import com.example.RV.PostInfo
 import com.example.community.databinding.ActivityWritingBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
 
 class WritingActivity : Activity() {
     private lateinit var firebaseAuth: FirebaseAuth
@@ -47,14 +39,14 @@ class WritingActivity : Activity() {
 
         val mDatabase = FirebaseDatabase.getInstance().reference
 
-        val PostDao = PostDao(
+        val PostInfo = PostInfo(
             title,
             content,
             category
         )
 
         val db: FirebaseDatabase = FirebaseDatabase.getInstance()
-       // val reference: DatabaseReference = db.getReference("UserAccount")
+        val reference: DatabaseReference = db.getReference("Post Content")
       //   mDatabase.child("UserAccount").child(Firebase.auth.currentUser!!.uid.toString()).child("info").setValue(userInfo)
 
         // 가입성공시 join액티비티 빠져나와 login액티비티로
@@ -67,5 +59,4 @@ class WritingActivity : Activity() {
 
 
     }
-}
 }
