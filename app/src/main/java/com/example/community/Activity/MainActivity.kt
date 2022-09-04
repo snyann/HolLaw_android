@@ -20,11 +20,9 @@ import com.google.api.gax.core.FixedCredentialsProvider
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.auth.oauth2.ServiceAccountCredentials
 import com.google.cloud.dialogflow.v2.*
+import com.google.common.collect.Lists
 import java.io.InputStream
 import java.util.*
-import kotlin.collections.ArrayList
-import com.google.common.collect.Lists;
-
 
 
 class MainActivity : AppCompatActivity(), BotReply {
@@ -113,19 +111,21 @@ class MainActivity : AppCompatActivity(), BotReply {
             startActivity(intent)
         }
 
-        val chatView = findViewById<View>(R.id.chatView) as RecyclerView
-        val editMessage = findViewById<View>(R.id.et_searchwindow) as EditText
-        val btnSend = findViewById<View>(R.id.btn_send) as Button
+        val chatView = findViewById<View>(R.id.chatView) as RecyclerView?
+        val editMessage = findViewById<View>(R.id.editMessage) as EditText?
+        val btnSend = findViewById<View>(R.id.btn_send) as Button?
+
         chatAdapter = ChatAdapter(messageList, this)
-        chatView.setAdapter(chatAdapter)
-        btnSend.setOnClickListener(View.OnClickListener {
-            val message = editMessage.getText().toString()
+        chatView?.setAdapter(chatAdapter)
+
+        btnSend?.setOnClickListener(View.OnClickListener {
+            val message = editMessage?.getText().toString()
             if (!message.isEmpty()) {
                 messageList.add(Message(message, false))
-                editMessage.setText("")
+                editMessage?.setText("")
                 sendMessageToBot(message)
-                Objects.requireNonNull(chatView.getAdapter()).notifyDataSetChanged()
-                Objects.requireNonNull(chatView.getLayoutManager())
+                Objects.requireNonNull(chatView?.getAdapter()).notifyDataSetChanged()
+                Objects.requireNonNull(chatView?.getLayoutManager())
                     ?.scrollToPosition(messageList.size - 1)
             } else {
                 Toast.makeText(this@MainActivity, "텍스트를 입력해 주세요", Toast.LENGTH_SHORT).show()
