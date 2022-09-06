@@ -67,6 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         app:stackFromEnd="true"
         tools:itemCount="2"
-        tools:listitem="@layout/adapter_message_one" />
+        tools:listitem="@layout/adapter_message_one"
+        tools:layout_editer_absoluteY="1dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
