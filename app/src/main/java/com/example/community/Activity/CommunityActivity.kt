@@ -1,5 +1,6 @@
 package com.example.community.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.community.PostAdapter
@@ -19,12 +20,14 @@ class CommunityActivity : AppCompatActivity() {
 
         binding = ActivityCommunityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         firebaseAuth = FirebaseAuth.getInstance() //
 
         binding.ibWriting.setOnClickListener{
-
-
+            val intent = Intent(this, WritingActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
+
+
 }

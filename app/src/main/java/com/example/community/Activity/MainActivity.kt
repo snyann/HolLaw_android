@@ -2,13 +2,23 @@ package com.example.community.Activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
+import com.example.RV.Requested_Data
+import com.example.RV.Result_Send
 import com.example.community.R
+import com.example.community.databinding.ActivityLoginBinding
+import com.example.community.databinding.ActivityMainBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     private val fragmentManager: FragmentManager? = null
@@ -16,6 +26,15 @@ class MainActivity : AppCompatActivity() {
     private val btn_register: Button? = null
     private val et_id: EditText? = null
     private val et_password: EditText? = null
+    lateinit var binding: ActivityMainBinding // ActivityLogin 바인딩
+
+
+    var retrofit = Retrofit.Builder()
+        .baseUrl("http://43.201.14.53:8888/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+    var resultsRest : Result_Send = retrofit.create(Result_Send::class.java)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,5 +58,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, ChatbotActivity::class.java)
             startActivity(intent)
         }
+
     }
 }

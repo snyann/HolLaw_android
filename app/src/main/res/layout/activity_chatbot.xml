@@ -19,8 +19,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <Button
-        android:id="@+id/btn_community"
+        android:id="@+id/chat_community"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -31,10 +32,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_recent" />
+        app:layout_constraintTop_toBottomOf="@+id/chat_recent" />
 
     <Button
-        android:id="@+id/btn_keyword"
+        android:id="@+id/chat_keyword"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -46,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <Button
-        android:id="@+id/btn_chatbot"
+        android:id="@+id/chat_chatbot"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -57,10 +58,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_representative" />
+        app:layout_constraintTop_toBottomOf="@+id/chat_representative" />
 
     <Button
-        android:id="@+id/btn_category"
+        android:id="@+id/chat_category"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -72,20 +73,23 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <Button
-        android:id="@+id/btn_recent"
+        android:id="@+id/chat_category_recent"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+
+
+
         android:backgroundTint="#FF9800"
         android:text="최근 개정 법률"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/btn_community"
+        app:layout_constraintBottom_toTopOf="@+id/chat_community"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_category" />
+        app:layout_constraintTop_toBottomOf="@+id/chat_category" />
 
     <Button
-        android:id="@+id/btn_representative"
+        android:id="@+id/chat_representative"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -93,9 +97,9 @@
         android:backgroundTint="#FF9800"
         android:text="대표 키워드"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/btn_chatbot"
+        app:layout_constraintBottom_toTopOf="@+id/chat_chatbot"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_keyword" />
+        app:layout_constraintTop_toBottomOf="@+id/chat_keyword" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -105,7 +109,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_keyword"
+        app:layout_constraintBottom_toTopOf="@+id/chat_keyword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
@@ -120,11 +124,11 @@
             android:text="검색어를 입력해 주세요."
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_send"
+            app:layout_constraintEnd_toStartOf="@+id/chat_send"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btn_send"
+            android:id="@+id/chat_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"

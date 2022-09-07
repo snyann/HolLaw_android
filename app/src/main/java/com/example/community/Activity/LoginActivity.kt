@@ -47,16 +47,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun login(et_id: String, et_pwd: String, myContext: Context) {
+    private fun login(email: String, pwd1: String, myContext: Context) {
         //firebase연결
-        firebaseAuth.signInWithEmailAndPassword(et_id, et_pwd)
+        firebaseAuth.signInWithEmailAndPassword(email, pwd1)
             .addOnCompleteListener(
             this@LoginActivity
         ){ task ->
                 if(task.isSuccessful){
                     Log.d(ContentValues.TAG, "signInWithEmail:success")
 
-                    MySharedPreferences.setUserId(myContext, et_id, et_pwd)
+                    MySharedPreferences.setUserId(myContext, email, pwd1)
 
                     if(myContext == this@LoginActivity) {
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
