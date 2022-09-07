@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityLoginBinding // ActivityLogin 바인딩
-    private var firebaseAuth = FirebaseAuth.getInstance() // FirebaseAuth 인스턴스 초기화
+    private var fbAuth = FirebaseAuth.getInstance() // FirebaseAuth 인스턴스 초기화
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,32 +40,28 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_login -> {
-                val et_id = binding!!.editTextId.toString()
-                val et_password = binding!!.editTextPassword.toString()
-                login(et_id, et_password, this)
+                val email = binding!!.editTextId.toString()
+                val pwd1 = binding!!.editTextPassword.toString()
+                login(email, pwd1)
             }
         }
     }
 
-    private fun login(email: String, pwd1: String, myContext: Context) {
+    private fun login(email: String, pwd1: String) {
         //firebase연결
-        firebaseAuth.signInWithEmailAndPassword(email, pwd1)
+        fbAuth.signInWithEmailAndPassword(email, pwd1)
             .addOnCompleteListener(
             this@LoginActivity
         ){ task ->
                 if(task.isSuccessful){
                     Log.d(ContentValues.TAG, "signInWithEmail:success")
-
-                    MySharedPreferences.setUserId(myContext, email, pwd1)
-
-                    if(myContext == this@LoginActivity) {
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent)
                         Toast.makeText(this@LoginActivity, "로그인성공!", Toast.LENGTH_SHORT)
                             .show()
                     }
 
-                } else { // 로그인 오류 시
+                else { // 로그인 오류 시
                     Log.w(ContentValues.TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(this@LoginActivity, "로그인 정보 오류.\n다시 시도해주세요", Toast.LENGTH_SHORT)
                         .show()
