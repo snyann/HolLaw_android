@@ -31,7 +31,7 @@ class ChatbotActivity : AppCompatActivity(), BotReply {
     var chatAdapter: ChatAdapter? = null
     var messageList: MutableList<Message> = ArrayList()
     var editMessage: EditText? = null
-    var btnSend: ImageButton? = null
+    var btnSend: Button? = null
 
     //dialogFlow
     private var sessionsClient: SessionsClient? = null
