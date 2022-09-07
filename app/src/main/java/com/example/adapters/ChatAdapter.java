@@ -23,7 +23,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
     @NonNull @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(activity).inflate(R.layout.activity_chatbot, parent, false);
+        View view = LayoutInflater.from(activity).inflate(R.layout.adapter_message_one, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -52,7 +52,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            messageSend = itemView.findViewById(R.id.btn_send);
+            messageSend = itemView.findViewById(R.id.message_send);
             messageReceive = itemView.findViewById(R.id.message_receive);
         }
     }

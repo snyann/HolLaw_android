@@ -1,5 +1,6 @@
 package com.example.community.Activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -39,54 +40,14 @@ class MainActivity : AppCompatActivity(), BotReply {
     private val uuid: String = UUID.randomUUID().toString()
     private val TAG = "mainactivity"
 
-    private fun setUpBot() {
-        try {
-            val stream: InputStream = this.resources.openRawResource(R.raw.credential)
-            val credentials: GoogleCredentials = GoogleCredentials.fromStream(stream)
-                .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"))
-            val projectId = (credentials as ServiceAccountCredentials).projectId
-            val settingsBuilder: SessionsSettings.Builder = SessionsSettings.newBuilder()
-            val sessionsSettings: SessionsSettings = settingsBuilder.setCredentialsProvider(
-                FixedCredentialsProvider.create(credentials)
-            ).build()
-            sessionsClient = SessionsClient.create(sessionsSettings)
-            sessionName = SessionName.of(projectId, uuid)
-            Log.d(TAG, "projectId : $projectId")
-        } catch (e: Exception) {
-            Log.d(TAG, "setUpBot: " + e.message)
-        }
-    }
-
-    private fun sendMessageToBot(message: String) {
-        val input: QueryInput = QueryInput.newBuilder()
-            .setText(TextInput.newBuilder().setText(message).setLanguageCode("en-US")).build()
-        SendMessageInBg(this, sessionName, sessionsClient, input).execute()
-    }
-
-    override fun callback(returnResponse: DetectIntentResponse?) {
-        if (returnResponse != null) {
-            val botReply: String = returnResponse.getQueryResult().getFulfillmentText()
-            if (!botReply.isEmpty()) {
-                messageList.add(Message(botReply, true))
-                chatAdapter?.notifyDataSetChanged()
-                Objects.requireNonNull(chatView!!.layoutManager)
-                    ?.scrollToPosition(messageList.size - 1)
-            } else {
-                Toast.makeText(this, "something went wrong", Toast.LENGTH_SHORT).show()
-            }
-        } else {
-            Toast.makeText(this, "failed to connect!", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-
-
 
     private val fragmentManager: FragmentManager? = null
     private val btn_mypage: Button? = null
     private val btn_register: Button? = null
     private val et_id: EditText? = null
     private val et_password: EditText? = null
+
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -111,26 +72,69 @@ class MainActivity : AppCompatActivity(), BotReply {
             startActivity(intent)
         }
 
-        val chatView = findViewById<View>(R.id.chatView) as RecyclerView?
-        val editMessage = findViewById<View>(R.id.editMessage) as EditText?
-        val btnSend = findViewById<View>(R.id.btn_send) as Button?
+        chatView = findViewById(R.id.chatView);
+        editMessage = findViewById(R.id.editMessage);
+        btnSend = findViewById(R.id.btn_send);
+
 
         chatAdapter = ChatAdapter(messageList, this)
-        chatView?.setAdapter(chatAdapter)
+        chatView?.adapter = chatAdapter
 
         btnSend?.setOnClickListener(View.OnClickListener {
-            val message = editMessage?.getText().toString()
+            val message = editMessage?.text.toString()
             if (!message.isEmpty()) {
                 messageList.add(Message(message, false))
                 editMessage?.setText("")
                 sendMessageToBot(message)
-                Objects.requireNonNull(chatView?.getAdapter()).notifyDataSetChanged()
-                Objects.requireNonNull(chatView?.getLayoutManager())
+                Objects.requireNonNull(chatView?.adapter).notifyDataSetChanged()
+                Objects.requireNonNull(chatView?.layoutManager)
                     ?.scrollToPosition(messageList.size - 1)
             } else {
                 Toast.makeText(this@MainActivity, "텍스트를 입력해 주세요", Toast.LENGTH_SHORT).show()
             }
         })
         setUpBot()
+    }
+    private fun setUpBot() {
+        try {
+            val stream: InputStream = this.resources.openRawResource(R.raw.credential)
+            val credentials: GoogleCredentials = GoogleCredentials.fromStream(stream)
+                .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"))
+            val projectId = (credentials as ServiceAccountCredentials).projectId
+
+            val settingsBuilder: SessionsSettings.Builder = SessionsSettings.newBuilder()
+            val sessionsSettings: SessionsSettings = settingsBuilder.setCredentialsProvider(
+                FixedCredentialsProvider.create(credentials)
+            ).build()
+            sessionsClient = SessionsClient.create(sessionsSettings)
+            sessionName = SessionName.of(projectId, uuid)
+
+            Log.d(TAG, "projectId : $projectId")
+        } catch (e: Exception) {
+            Log.d(TAG, "setUpBot: " + e.message)
+        }
+    }
+
+    private fun sendMessageToBot(message: String) {
+        val input: QueryInput = QueryInput.newBuilder()
+            .setText(TextInput.newBuilder().setText(message).setLanguageCode("ko-KR")).build()
+        SendMessageInBg(this, sessionName, sessionsClient, input).execute()
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    override fun callback(returnResponse: DetectIntentResponse?) {
+        if (returnResponse != null) {
+            val botReply: String = returnResponse.getQueryResult().getFulfillmentText()
+            if (!botReply.isEmpty()) {
+                messageList.add(Message(botReply, true))
+                chatAdapter?.notifyDataSetChanged()
+                Objects.requireNonNull(chatView!!.layoutManager)
+                    ?.scrollToPosition(messageList.size - 1)
+            } else {
+                Toast.makeText(this, "something went wrong", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            Toast.makeText(this, "failed to connect!", Toast.LENGTH_SHORT).show()
+        }
     }
 }

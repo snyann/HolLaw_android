@@ -95,27 +95,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_keyword" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chatView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:stackFromEnd="true"
-        tools:itemCount="2"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="50dp"
-        tools:listitem="@layout/adapter_message_one" >
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <EditText
-        android:id="@+id/et_searchwindow"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:text="검색어를 입력해 주세요."
-        android:textSize="20sp"
-        tools:layout_editor_absoluteY="50dp" />
 
     <Button
         android:id="@+id/btn_send"
