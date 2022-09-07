@@ -7,12 +7,20 @@
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/drawable/CNS_arrow_background.xml" value="0.2585" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/drawable/CNS_user_background.xml" value="0.3685" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/drawable/CNS_viewMore_background.xml" value="0.3685" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/drawable/bg_chat_receive.xml" value="0.1025" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/drawable/bg_chat_send.xml" value="0.1" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/drawable/border_outline.xml" value="0.1" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2585" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_chatbot.xml" value="0.33" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_chatbot2.xml" value="0.25" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_chatobot2.xml" value="0.3061594202898551" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_community_writing2.xml" value="0.18885869565217392" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_join.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_result.xml" value="0.36770833333333336" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/activity_result_law.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/adapter_message_one.xml" value="0.1" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/chatbot_guideline.xml" value="0.25" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/cns_4p_01.xml" value="0.353125" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/cns_5p_01.xml" value="0.353125" />
@@ -27,6 +35,12 @@
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/community_main.xml" value="0.18" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/community_writing.xml" value="0.33" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/detail.xml" value="0.30364583333333334" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/fragment_community.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/fragment_community_content.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/fragment_community_content_list.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/fragment_full_law.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/fragment_full_precedent.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/fragment_keyword.xml" value="0.4041666666666667" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/keyword_recycler.xml" value="0.353125" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/lawyer_first.xml" value="0.25" />
         <entry key="..\:/Users/Hun/AndroidStudioProjects/community/app/src/main/res/layout/lawyer_main.xml" value="0.18645833333333334" />
@@ -45,7 +59,6 @@
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_community_content_list.xml" value="0.21422101449275363" />
-        <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_full_precedent.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_keyword.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_recent.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/Leejeongmin/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/fragment_transit_field.xml" value="0.21422101449275363" />
