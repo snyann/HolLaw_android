@@ -47,7 +47,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,12 +73,20 @@
             app:layout_constraintTop_toBottomOf="@+id/community_title"
             tools:ignore="MissingConstraints"></TextView>
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bg_chat_receive"
+            app:layout_constraintTop_toBottomOf="@+id/community_content"
+            tools:ignore="MissingConstraints"></ImageView>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="400dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/community_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_comment" />
 
