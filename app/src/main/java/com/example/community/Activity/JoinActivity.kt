@@ -14,8 +14,10 @@ import com.example.community.databinding.ActivityWritingBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 
 class JoinActivity : AppCompatActivity() {
     lateinit var binding: ActivityJoinBinding
@@ -28,7 +30,7 @@ class JoinActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        fbAuth = FirebaseAuth.getInstance() //firebaseAuth 인스턴스 초기화
+        fbAuth = Firebase.auth //firebaseAuth 인스턴스 초기화
 
         binding.joinRegister.setOnClickListener {
             val email = binding.editTextTextEmailAddress.text.toString()
@@ -57,6 +59,7 @@ class JoinActivity : AppCompatActivity() {
             }else{ // 비밀번호란과 비밀번호 확인란이 일치하지 않을 때
                 Toast.makeText(this, "회원가입 실패", Toast.LENGTH_LONG).show()
             }
+
         }
     }
 }
