@@ -152,7 +152,6 @@
             android:textAlignment="center"
             android:textColor="@drawable/custom_text_radio"
             android:textSize="17dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView_result_"
             app:layout_constraintEnd_toStartOf="@+id/radioButton2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
