@@ -44,6 +44,9 @@
         <activity
             android:name=".Activity.CommunityActivity"
             android:label="커뮤니티" />
+        <activity
+            android:name=".Activity.WritingActivity"
+            android:label="게시물작성" />
     </application>
 
 </manifest>

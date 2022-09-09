@@ -2,8 +2,8 @@ package com.example.community.Activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.community.CommunityAdapter
-import com.example.community.CommunityList
+import com.example.adapters.CommunityAdapter
+import com.example.models.CommunityList
 import com.example.community.databinding.FragmentCommunityBinding
 
 class CommunityActivity : AppCompatActivity() {

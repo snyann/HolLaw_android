@@ -1,4 +1,4 @@
-package com.example.community
+package com.example.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -15,7 +15,7 @@ class CommunityAdapter(val communityList: List<CData>):RecyclerView.Adapter<Comm
             }
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommunityAdapter.CommunityViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommunityViewHolder {
         return CommunityViewHolder(ItemContentBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
