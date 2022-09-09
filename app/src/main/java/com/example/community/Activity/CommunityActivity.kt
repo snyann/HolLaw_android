@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.Insets.add
 import com.example.RV.PostInfo
+import com.example.adapters.CommunityAdapter
 import com.example.community.PostAdapter
 import com.example.community.R
 import com.example.community.databinding.ActivityCommunityBinding
@@ -36,7 +37,8 @@ class CommunityActivity : AppCompatActivity() {
             intent.putExtra("uid",fbAuth.currentUser?.uid)
             startActivity(intent)
         }
-
+        val adapter = CommunityAdapter(CommunityList.communityList)
+        binding?.recyclerView2?.adapter = adapter
         
 
         fbdb = FirebaseDatabase.getInstance().getReference().child("uid")
