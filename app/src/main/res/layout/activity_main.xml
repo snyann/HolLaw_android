@@ -145,12 +145,10 @@
 
         <TextView
             android:id="@+id/update_text1"
-            android:layout_width="133dp"
-            android:layout_height="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
             android:text="상가건물 임대차 보호법"
             app:layout_constraintStart_toStartOf="@id/view3"
             app:layout_constraintTop_toBottomOf="@+id/btn_update" />
@@ -266,11 +264,10 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="55dp"
-        android:layout_height="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="67dp"
 
         android:text="임대차"
         android:textStyle="bold"

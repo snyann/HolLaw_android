@@ -2,8 +2,8 @@ package com.example.community.Activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.community.LawAdapter
-import com.example.community.LawList
+import com.example.adapters.LawAdapter
+import com.example.models.LawList
 import com.example.community.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {

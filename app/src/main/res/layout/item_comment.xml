@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <ImageButton
+        android:id="@+id/user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:src="@drawable/ic_user"
+        tools:ignore="MissingConstraints"></ImageButton>
+
+    <TextView
+        android:id="@+id/comment_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="익명"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/user"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="370dp"
+        android:layout_height="0dp"
+        android:maxLines="5"
+        android:text="댓글의 내용이 들어갑니다."
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comment_title"
+        tools:ignore="MissingConstraints"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

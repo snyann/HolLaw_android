@@ -1,4 +1,4 @@
-package com.example.community
+package com.example.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
