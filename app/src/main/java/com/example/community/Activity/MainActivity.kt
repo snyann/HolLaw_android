@@ -9,7 +9,6 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
-import com.example.RV.Requested_Data
 
 import com.example.community.R
 import com.example.community.databinding.ActivityLoginBinding

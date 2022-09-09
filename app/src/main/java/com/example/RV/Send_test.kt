@@ -1,4 +1,4 @@
-package com.example.RV
+package com.example.RV/*package com.example.RV
 
 
 import android.os.Parcelable
@@ -18,3 +18,4 @@ data class Requested_Data(
     @SerializedName("Keyword_content") var KeywordContent: ArrayList<String>
 ) : Parcelable
 
+*/
