@@ -1,6 +1,6 @@
 package com.example.RV
 
-data class CData (
+class CData (
     val title: String,
-    val content: String
+    val content: String,
 )

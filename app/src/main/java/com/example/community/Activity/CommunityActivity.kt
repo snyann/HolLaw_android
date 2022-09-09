@@ -11,6 +11,7 @@ import com.example.RV.PostInfo
 import com.example.community.PostAdapter
 import com.example.community.R
 import com.example.community.databinding.ActivityCommunityBinding
+import com.example.models.CommunityList
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
@@ -19,7 +20,7 @@ class CommunityActivity : AppCompatActivity() {
 
     private lateinit var fbAuth: FirebaseAuth
     lateinit var binding: ActivityCommunityBinding
-    private var itemList = arrayListOf<PostList>() //리스트 아이템 배열
+    private var itemList = arrayListOf<CommunityList>() //리스트 아이템 배열
     private lateinit var fbdb:DatabaseReference
 
 
@@ -35,8 +36,8 @@ class CommunityActivity : AppCompatActivity() {
             intent.putExtra("uid",fbAuth.currentUser?.uid)
             startActivity(intent)
         }
-        var postadapter = PostAdapter(itemList) //리사이클러뷰 어댑터
-        //itemList.adapter=postadapter
+
+        
 
         fbdb = FirebaseDatabase.getInstance().getReference().child("uid")
         //리스트 업데이트
@@ -50,7 +51,7 @@ class CommunityActivity : AppCompatActivity() {
                 val postResult = data.getValue(PostInfo::class.java)
                 postResult?: return
             }
-                postadapter.notifyDataSetChanged()
+                adapter.notifyDataSetChanged()
             }
 
         })
