@@ -29,8 +29,6 @@ class JoinActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityJoinBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
         fbAuth = FirebaseAuth.getInstance()
 
         binding.joinRegister.setOnClickListener {
@@ -60,20 +58,22 @@ class JoinActivity : AppCompatActivity() {
                            val email: String?= user?.email
                            val uid: String? = user?.uid
 
-                           //val
+
                            val userinfo= UserInfo(
                                uid,
                                email,
                                pwd1
                            )
-                           val  db : FirebaseDatabase =FirebaseDatabase.getInstance()
+
+                           val  db : FirebaseDatabase = FirebaseDatabase.getInstance()
                            val ref : DatabaseReference =db.getReference("UserInfo")
                            ref.child(uid.toString()).push().setValue(userinfo)
-                           val intent = Intent(this, LoginActivity::class.java)
                        }
+                        val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)
                         Toast.makeText(this, "화원가입 성공", Toast.LENGTH_LONG).show()
                     }
+
             }else{ // 비밀번호란과 비밀번호 확인란이 일치하지 않을 때
                 Toast.makeText(this, "회원가입 실패", Toast.LENGTH_LONG).show()
             }

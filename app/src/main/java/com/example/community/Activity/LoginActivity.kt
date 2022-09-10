@@ -26,8 +26,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding!!.root)
 
      //버튼 클릭 이벤트
-        binding.btnLogin.setOnClickListener{}
-        binding.btnRegister.setOnClickListener{}
+        binding.btnLogin.setOnClickListener(this)
+        binding.btnRegister.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -48,6 +48,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun login(email: String, pwd1: String) {
         //firebase연결
+
         fbAuth.signInWithEmailAndPassword(email, pwd1)
             .addOnCompleteListener(
             this@LoginActivity

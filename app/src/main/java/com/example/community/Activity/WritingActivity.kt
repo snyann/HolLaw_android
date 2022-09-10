@@ -34,18 +34,17 @@ class WritingActivity : AppCompatActivity() {
         //라디오버튼 선택 어케 넘기는지 확인해보기
         //val image:Boolean = binding.imAddimage.    이미지 첨부 확인
         binding.btnComplete.setOnClickListener{
+
             val fbdb=FirebaseDatabase.getInstance()
             val ref = fbdb.getReference()
 
-
             val postInfo = PostInfo (
-            binding.writeTitle.text.toString(),
+                binding.writeTitle.text.toString(),
                 binding.writeContent.text.toString(),
-                 binding.rbRealestate.isChecked
+                binding.rbRealestate.isChecked
             )
 
-
-         ref.child(uid).push().setValue(postInfo)
+            ref.child(uid).push().setValue(postInfo)
 
             val intent = Intent(this, CommunityActivity::class.java)
             startActivity(intent)
