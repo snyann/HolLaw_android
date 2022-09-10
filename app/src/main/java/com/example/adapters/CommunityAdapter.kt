@@ -3,13 +3,13 @@ package com.example.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.RV.CData
+import com.example.RV.PostInfo
 import com.example.community.databinding.ItemContentBinding
 
-class CommunityAdapter(val communityList: List<CData>):RecyclerView.Adapter<CommunityAdapter.CommunityViewHolder>() {
+class CommunityAdapter(val communityList: List<PostInfo>):RecyclerView.Adapter<CommunityAdapter.CommunityViewHolder>() {
     inner class CommunityViewHolder(val itemBinding: ItemContentBinding)
         : RecyclerView.ViewHolder(itemBinding.root) {
-            fun bindItem(data: CData){
+            fun bindItem(data: PostInfo){
                 itemBinding.tvTitlelist.text = data.title
                 itemBinding.tvContent.text = data.content
             }

@@ -1,6 +1,5 @@
 package com.example.models
 
-import com.example.RV.CData
 import com.example.RV.PostInfo
 
 object CommunityList {
