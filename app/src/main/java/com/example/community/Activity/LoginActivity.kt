@@ -25,10 +25,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
 
-        //버튼 클릭 이벤트
-        binding.btnLogin.setOnClickListener(this)
-        binding.btnRegister.setOnClickListener(this)
-
+     //버튼 클릭 이벤트
+        binding.btnLogin.setOnClickListener{}
+        binding.btnRegister.setOnClickListener{}
     }
 
     override fun onClick(view: View) {

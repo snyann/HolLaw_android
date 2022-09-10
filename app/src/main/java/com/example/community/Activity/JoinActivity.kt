@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.RV.UserInfo
 import com.example.community.R
+import com.example.community.RV.UserAccount
 import com.example.community.databinding.ActivityJoinBinding
 import com.example.community.databinding.ActivityWritingBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -30,7 +31,7 @@ class JoinActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        fbAuth = Firebase.auth //firebaseAuth 인스턴스 초기화
+        fbAuth = FirebaseAuth.getInstance()
 
         binding.joinRegister.setOnClickListener {
             val email = binding.editTextTextEmailAddress.text.toString()
@@ -39,21 +40,38 @@ class JoinActivity : AppCompatActivity() {
             var isGoToJoin = true
 
             if (email.isEmpty()) {
-                Toast.makeText(this, "이메일을 입력해주세요.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "이메일 입력해주세요.", Toast.LENGTH_LONG).show()
                 isGoToJoin = false
             }
             if (pwd1.isEmpty()) {
-                Toast.makeText(this, "password1을 입력해주세요.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "비밀번호 입력해주세요.", Toast.LENGTH_LONG).show()
                 isGoToJoin = false
             }
             if (pwd2.isEmpty()) {
-                Toast.makeText(this, "password1을 입력해주세요.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "비밀번호 확인 해주세요", Toast.LENGTH_LONG).show()
                 isGoToJoin = false
             }
 
             if (pwd1 == pwd2) {
                 fbAuth.createUserWithEmailAndPassword(email, pwd1)
                     .addOnCompleteListener(this@JoinActivity) { task ->
+                       if(task.isSuccessful){
+                           val user:FirebaseUser?=fbAuth.currentUser
+                           val email: String?= user?.email
+                           val uid: String? = user?.uid
+
+                           //val
+                           val userinfo= UserInfo(
+                               uid,
+                               email,
+                               pwd1
+                           )
+                           val  db : FirebaseDatabase =FirebaseDatabase.getInstance()
+                           val ref : DatabaseReference =db.getReference("UserInfo")
+                           ref.child(uid.toString()).push().setValue(userinfo)
+                           val intent = Intent(this, LoginActivity::class.java)
+                       }
+                        startActivity(intent)
                         Toast.makeText(this, "화원가입 성공", Toast.LENGTH_LONG).show()
                     }
             }else{ // 비밀번호란과 비밀번호 확인란이 일치하지 않을 때

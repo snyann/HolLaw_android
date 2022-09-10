@@ -37,12 +37,13 @@ class CommunityActivity : AppCompatActivity() {
             intent.putExtra("uid",fbAuth.currentUser?.uid)
             startActivity(intent)
         }
-        val adapter = CommunityAdapter(CommunityList.communityList)
-        binding?.recyclerView2?.adapter = adapter
-        
+
 
         fbdb = FirebaseDatabase.getInstance().getReference().child("uid")
         //리스트 업데이트
+        val adapter = CommunityAdapter(CommunityList.communityList)
+        binding!!.recyclerView2?.adapter = adapter
+
         fbdb.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(dataSnapshot: DatabaseError) {
             }
