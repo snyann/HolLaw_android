@@ -22,6 +22,8 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+        val adapter = PrecedentAdapter(PrecedentList.precedentlist)
+        binding?.recyclerView?.adapter = adapter
 
         binding?.radioGroup?.setOnCheckedChangeListener { group, checkedId ->
             when(checkedId){

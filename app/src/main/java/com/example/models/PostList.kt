@@ -1,6 +1,4 @@
-package com.example.community.Activity
-
-import com.example.RV.Data
+package com.example.models
 
 object PostList {
     val postList = listOf<data>(

@@ -1,21 +1,14 @@
 package com.example.community.Activity
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Insets.add
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.Insets.add
 import com.example.RV.PostInfo
 import com.example.adapters.CommunityAdapter
-import com.example.community.PostAdapter
-import com.example.community.R
 import com.example.community.databinding.ActivityCommunityBinding
 import com.example.models.CommunityList
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import com.google.firebase.ktx.Firebase
 
 class CommunityActivity : AppCompatActivity() {
 

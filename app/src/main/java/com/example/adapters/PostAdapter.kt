@@ -1,18 +1,12 @@
-package com.example.community
+package com.example.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.RV.PostInfo
-import com.example.community.Activity.PostList
-import com.example.community.databinding.ActivityCommunityBinding
-import com.google.common.collect.Iterables.size
-import com.google.common.collect.Iterators.size
-import java.nio.file.Files.size
+import com.example.community.R
+import com.example.models.PostList
 
 class PostAdapter(val itemList: ArrayList<PostList>): RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
@@ -24,7 +18,7 @@ class PostAdapter(val itemList: ArrayList<PostList>): RecyclerView.Adapter<PostA
     override fun getItemCount(): Int {
         return  itemList.size
     }
-    override fun onBindViewHolder(holder: PostAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
     }
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

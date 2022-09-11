@@ -148,7 +148,7 @@
                 android:paddingEnd="12dp"
                 android:text=" 판례 "
                 android:textAlignment="center"
-                android:onClick="onRadioButtonClicked"
+                android:checked="true"
                 android:textColor="@drawable/custom_text_radio"
                 android:textSize="17dp" />
 

@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_login -> {
-                val email = binding!!.editTextId.toString()
+                val email = binding!!.editTextTextEmailAddress.toString()
                 val pwd1 = binding!!.editTextPassword.toString()
                 login(email, pwd1)
             }
@@ -55,14 +55,14 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         ){ task ->
                 if(task.isSuccessful){
                     Log.d(ContentValues.TAG, "signInWithEmail:success")
-                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                        val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
-                        Toast.makeText(this@LoginActivity, "로그인성공!", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, "로그인성공!", Toast.LENGTH_SHORT)
                             .show()
                     }
 
                 else { // 로그인 오류 시
-                    Log.w(ContentValues.TAG, "signInWithEmail:failure", task.exception)
+                    Log.d(ContentValues.TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(this@LoginActivity, "로그인 정보 오류.\n다시 시도해주세요", Toast.LENGTH_SHORT)
                         .show()
                 }
