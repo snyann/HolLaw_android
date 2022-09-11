@@ -21,7 +21,7 @@ class CommunityActivity : AppCompatActivity() {
 
     private lateinit var fbAuth: FirebaseAuth
     lateinit var binding: ActivityCommunityBinding
-    private var itemList = arrayListOf<CommunityList>() //리스트 아이템 배열
+    //private var itemList = arrayListOf<CommunityList>() //리스트 아이템 배열
     private lateinit var fbdb:DatabaseReference
 
 
@@ -30,7 +30,6 @@ class CommunityActivity : AppCompatActivity() {
 
         binding = ActivityCommunityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        fbAuth = FirebaseAuth.getInstance() //
 
         binding.ibWriting.setOnClickListener{
             val intent = Intent(this, WritingActivity::class.java)
@@ -40,6 +39,8 @@ class CommunityActivity : AppCompatActivity() {
 
 
         fbdb = FirebaseDatabase.getInstance().getReference().child("uid")
+        fbAuth = FirebaseAuth.getInstance()
+
         //리스트 업데이트
         val adapter = CommunityAdapter(CommunityList.communityList)
         binding!!.recyclerView2?.adapter = adapter
@@ -54,10 +55,11 @@ class CommunityActivity : AppCompatActivity() {
                 val postResult = data.getValue(PostInfo::class.java)
                 postResult?: return
             }
-                adapter.notifyDataSetChanged()
-            }
 
+            }
         })
+
+        adapter.notifyDataSetChanged()
 
 
     }

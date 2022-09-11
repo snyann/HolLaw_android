@@ -12,6 +12,7 @@ class LawAdapter(val lawList: List<Data>):RecyclerView.Adapter<LawAdapter.LawVie
             fun bindItem(data: Data){
                 itemBinding.textView.text = data.title
                 itemBinding.textView2.text = data.content
+
             }
         }
 
