@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.RV.Data
+import com.example.community.Activity.FullLawFragment
 import com.example.community.Activity.FullPrecedentActivity
 import com.example.community.databinding.ItemKeywordBinding
 
@@ -28,7 +29,7 @@ class LawAdapter(val lawList: List<Data>):RecyclerView.Adapter<LawAdapter.LawVie
         holder.bindItem(data)
 
         holder.itemView.setOnClickListener{
-            val intent = Intent(holder.itemView?.context, FullPrecedentActivity::class.java)
+            val intent = Intent(holder.itemView?.context, FullLawFragment::class.java)
             ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
     }

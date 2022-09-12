@@ -82,7 +82,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +101,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="480dp"
         android:background="@drawable/layer_stroke"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -230,8 +229,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginEnd="32dp"
-            android:src="@drawable/ic_chat_bot"
             android:background="@drawable/custom_btn_g"
+            android:src="@drawable/ic_chat_bot"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_community" />

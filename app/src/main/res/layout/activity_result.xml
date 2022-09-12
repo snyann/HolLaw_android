@@ -85,7 +85,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.359"
@@ -121,7 +120,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="480dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -145,11 +144,11 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/custom_btn_radio"
                 android:button="@null"
+                android:checked="true"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:text=" 판례 "
                 android:textAlignment="center"
-                android:checked="true"
                 android:textColor="@drawable/custom_text_radio"
                 android:textSize="17dp" />
 
@@ -176,8 +175,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@id/radioGroup"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup"
             tools:layout_editor_absoluteY="50dp"
             tools:listitem="@layout/item_keyword" />
 
