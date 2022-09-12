@@ -32,9 +32,9 @@ class JoinActivity : AppCompatActivity() {
         fbAuth = FirebaseAuth.getInstance()
 
         binding.joinRegister.setOnClickListener {
-            val email = binding.editTextTextEmailAddress.text.toString()
-            val pwd1 = binding.editTextTextPassword.text.toString()
-            val pwd2 = binding.editTextTextPassword2.text.toString()
+            val email = binding.editTextTextEmailAddress.text.toString().trim()
+            val pwd1 = binding.editTextTextPassword.text.toString().trim()
+            val pwd2 = binding.editTextTextPassword2.text.toString().trim()
             var isGoToJoin = true
 
             if (email.isEmpty()) {

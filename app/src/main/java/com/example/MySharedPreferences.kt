@@ -5,17 +5,38 @@ import android.content.SharedPreferences
 
 object MySharedPreferences {
     private val MY_AUTHORIZATION: String = "authorization"
-    fun setUserId(
+    fun setEmail(
         context: Context,
-        etId: String,
-        etPwd: String)
+        email: String,
+        pwd1: String)
     {
         val prefs: SharedPreferences =
             context.getSharedPreferences(MY_AUTHORIZATION, Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor = prefs.edit()
-        editor.putString("et_ID", etId)
-        editor.putString("et_pwd",etPwd)
+        editor.putString("email", email)
+        editor.putString("pwd",pwd1)
         editor.apply()
 
     }
+
+
+    fun getEmail(context: Context): String {
+        val prefs: SharedPreferences =
+            context.getSharedPreferences(MY_AUTHORIZATION, Context.MODE_PRIVATE)
+        return prefs.getString("email", "").toString()
+    }
+    fun getPwd(context: Context): String {
+        val prefs: SharedPreferences =
+            context.getSharedPreferences(MY_AUTHORIZATION, Context.MODE_PRIVATE)
+        return prefs.getString("pwd", "").toString()
+    }
+
+    fun clearUser(context: Context) {
+        val prefs: SharedPreferences =
+            context.getSharedPreferences(MY_AUTHORIZATION, Context.MODE_PRIVATE)
+        val editor: SharedPreferences.Editor = prefs.edit()
+        editor.clear()
+        editor.apply()
+    }
+
 }
