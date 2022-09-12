@@ -45,6 +45,9 @@
         <activity
             android:name=".Activity.WritingActivity"
             android:label="게시물작성" />
+        <activity
+            android:name=".Activity.FullPrecedentActivity"
+            android:label="판례전문" />
     </application>
 
 </manifest>

@@ -1,9 +1,12 @@
 package com.example.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.RV.Data
+import com.example.community.Activity.FullPrecedentActivity
 import com.example.community.databinding.ItemKeywordBinding
 
 class LawAdapter(val lawList: List<Data>):RecyclerView.Adapter<LawAdapter.LawViewHolder>() {
@@ -23,6 +26,11 @@ class LawAdapter(val lawList: List<Data>):RecyclerView.Adapter<LawAdapter.LawVie
     override fun onBindViewHolder(holder: LawViewHolder, position: Int) {
         val data = lawList[position]
         holder.bindItem(data)
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView?.context, FullPrecedentActivity::class.java)
+            ContextCompat.startActivity(holder.itemView.context, intent, null)
+        }
     }
 
     override fun getItemCount(): Int {
