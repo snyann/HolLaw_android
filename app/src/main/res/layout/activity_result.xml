@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity.ResultActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/text1"
@@ -85,6 +84,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="10dp"
+        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.359"
@@ -120,7 +120,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -130,54 +130,59 @@
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="32dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/custom_btn_radio"
+            android:button="@null"
+            android:checked="true"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text=" 판례 "
+            android:textAlignment="center"
+            android:textColor="@drawable/custom_text_radio"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toStartOf="@+id/radioButton2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_margin="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/custom_btn_radio"
-                android:button="@null"
-                android:checked="true"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:text=" 판례 "
-                android:textAlignment="center"
-                android:textColor="@drawable/custom_text_radio"
-                android:textSize="17dp" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="7dp"
-                android:background="@drawable/custom_btn_radio"
-                android:button="@null"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:text=" 법률 "
-                android:textAlignment="center"
-                android:textColor="@drawable/custom_text_radio"
-                android:textSize="17dp" />
-        </RadioGroup>
-
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/custom_btn_radio"
+            android:button="@null"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text=" 법률 "
+            android:textAlignment="center"
+            android:textColor="@drawable/custom_text_radio"
+            android:textSize="17dp"
+            app:layout_constraintStart_toEndOf="@+id/radioButton"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/radioGroup"
-            tools:layout_editor_absoluteY="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_keyword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
