@@ -8,11 +8,13 @@
 
     <ImageButton
         android:id="@+id/user"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:background="#ffffff"
         android:src="@drawable/ic_user"
-        tools:ignore="MissingConstraints"></ImageButton>
+        tools:ignore="MissingConstraints"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"></ImageButton>
 
     <TextView
         android:id="@+id/comment_title"
@@ -20,7 +22,7 @@
         android:layout_height="wrap_content"
         android:padding="2dp"
         android:text="익명"
-        android:textSize="34dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/user"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +33,7 @@
         android:layout_height="0dp"
         android:maxLines="5"
         android:text="댓글의 내용이 들어갑니다."
-        android:textSize="25dp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/comment_title"
         tools:ignore="MissingConstraints"></TextView>

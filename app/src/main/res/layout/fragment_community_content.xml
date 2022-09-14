@@ -75,16 +75,15 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bg_chat_receive"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             app:layout_constraintTop_toBottomOf="@+id/community_content"
             tools:ignore="MissingConstraints"></ImageView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="350dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
