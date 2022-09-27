@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val btn_mypage = findViewById<ImageButton>(R.id.btn_mypage)
         btn_mypage.setOnClickListener {
             val intent = Intent(applicationContext, LoginActivity::class.java)
@@ -49,6 +50,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, ChatbotActivity::class.java)
             startActivity(intent)
         }
-
+        val btn_update = findViewById<View>(R.id.btn_update) as ImageButton
+        btn_chatbot.setOnClickListener {
+            val intent = Intent(applicationContext, RssActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

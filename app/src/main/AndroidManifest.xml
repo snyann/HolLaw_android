@@ -4,6 +4,7 @@
     package="com.example.community">
     android:installLocation="preferExternal"
     uses-permission android:name="android.permission.INTERNET"
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,6 +25,9 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".Activity.ItemActivity"
+            android:label="최신개정법률"/>
         <activity
             android:name=".community_content_list"
             android:label="검색결과" />
