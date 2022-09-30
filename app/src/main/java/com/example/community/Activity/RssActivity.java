@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.adapters.RssAdapter;
-import com.example.community.item_rss;
+import com.example.community.item;
 import com.example.community.R;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -27,7 +27,7 @@ public class RssActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
-    ArrayList<item_rss> items= new ArrayList<>();
+    ArrayList<item> items= new ArrayList<>();
 
     RssAdapter adapter;
     @Override
@@ -51,7 +51,7 @@ public class RssActivity extends AppCompatActivity {
     void readRss(){
 
         try {
-            URL url=new URL("http://www.easylaw.go.kr/CSP/RssOvRetrieve.laf?csmSeq=629,684,649,896,566&topMenu=serviceUl7");
+            URL url=new URL("http://www.easylaw.go.kr/CSP/RssNewRetrieve.laf?topMenu=serviceUl7");
 //실디바이스 중에서 oreo버전 이상에서는 보안강화로 인해 https만 허용하도록 함..
 
             //스트림역할하여 데이터 읽어오기 : 인터넷 작업은 반드시 퍼미션 작성해야함.
@@ -84,7 +84,7 @@ public class RssActivity extends AppCompatActivity {
                 xpp.setInput(is, "utf-8");
                 int eventType= xpp.getEventType();
 
-                item_rss item= null;
+                item item= null;
                 String tagName= null;
 
                 while (eventType != XmlPullParser.END_DOCUMENT){
@@ -96,7 +96,7 @@ public class RssActivity extends AppCompatActivity {
                             Log.i("TAG", tagName);
 
                             if(tagName.equals("item")){
-                                item= new item_rss();
+                                item= new item();
                             }else if(tagName.equals("title")){
                                 xpp.next();
                                 if(item!=null) item.setTitle(xpp.getText());
@@ -168,7 +168,7 @@ public class RssActivity extends AppCompatActivity {
 
             //리사이클러에서 보여주는 데이터를 가진
             //아답터에게 데이터가 변경되었다고 공지
-            //adapter.notifyDataSetChanged();
+            adapter.notifyDataSetChanged();
 
 
             //이 메소드 안에서는 UI변경 작업 가능

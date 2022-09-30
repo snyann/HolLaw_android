@@ -52,6 +52,9 @@
         <activity
             android:name=".Activity.FullPrecedentActivity"
             android:label="판례전문" />
+        <activity
+            android:name=".Activity.RssActivity"
+            android:label="최근개정법률" />
     </application>
 
 </manifest>

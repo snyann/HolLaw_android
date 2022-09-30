@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         val btn_update = findViewById<View>(R.id.btn_update) as ImageButton
-        btn_chatbot.setOnClickListener {
+        btn_update.setOnClickListener {
             val intent = Intent(applicationContext, RssActivity::class.java)
             startActivity(intent)
         }

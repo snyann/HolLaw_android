@@ -11,17 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.community.item_rss;
+import com.example.community.item;
 import com.example.community.R;
 
 import java.util.ArrayList;
 
 public class RssAdapter extends RecyclerView.Adapter {
 
-    ArrayList<item_rss> items;
+    ArrayList<item> items;
     Context context;
 
-    public RssAdapter(ArrayList<item_rss> items, Context context) {
+    public RssAdapter(ArrayList<item> items, Context context) {
         this.items = items;
         this.context = context;
     }
@@ -41,7 +41,7 @@ public class RssAdapter extends RecyclerView.Adapter {
         VH vh= (VH)holder;
 
         //현재번째(position) 아이템 얻어오기
-        item_rss item= items.get(position);
+        item item= items.get(position);
         vh.tvTitle.setText(item.getTitle());
         vh.tvDesc.setText(item.getDesc());
         vh.tvDate.setText(item.getDate());
@@ -75,7 +75,7 @@ public class RssAdapter extends RecyclerView.Adapter {
         public VH(@NonNull View itemView) {
             super(itemView);
 
-            tvTitle=itemView.findViewById(R.id.tv_title);
+            tvTitle=itemView.findViewById(R.id.tv_rsstitle);
             tvDesc=itemView.findViewById(R.id.tv_desc);
             tvDate=itemView.findViewById(R.id.tv_date);
             iv=itemView.findViewById(R.id.iv);
