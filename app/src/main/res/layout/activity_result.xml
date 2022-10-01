@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Activity.ResultActivity">
 
     <TextView
         android:id="@+id/text1"
@@ -13,6 +14,7 @@
         android:layout_marginTop="53dp"
         android:layout_marginEnd="166dp"
         android:text="홀로서다"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/btn_mypage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,15 +23,16 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="24dp"
         android:text="홀로:HolLaw"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_mypage"
@@ -45,38 +48,48 @@
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/btn_filter"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:background="@drawable/ic_filter"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="222dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
+        app:layout_constraintEnd_toStartOf="@+id/btn_search"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        <ImageButton
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/ic_filter" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="상세검색"
-        app:layout_constraintLeft_toRightOf="@+id/btn_filter"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상세검색" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/editTextTextPersonName9"
         android:layout_width="300sp"
         android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
         android:layout_weight="1"
         android:background="@drawable/layer_stroke"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.359"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView2" />
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <ImageButton
         android:id="@+id/btn_search"
@@ -99,73 +112,72 @@
         android:layout_marginEnd="344dp"
         android:text="검색결과"
         android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_btn_radio"
+                android:button="@null"
+                android:checked="true"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text=" 판례 "
+                android:textAlignment="center"
+                android:textColor="@drawable/custom_text_radio"
+                android:textSize="17dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_margin="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/custom_btn_radio"
-            android:button="@null"
-            android:checked="true"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text=" 판례 "
-            android:textAlignment="center"
-            android:textColor="@drawable/custom_text_radio"
-            android:textSize="17dp"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_btn_radio"
+                android:button="@null"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text=" 법률 "
+                android:textAlignment="center"
+                android:textColor="@drawable/custom_text_radio"
+                android:textSize="17dp" />
+        </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/custom_btn_radio"
-            android:button="@null"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text=" 법률 "
-            android:textAlignment="center"
-            android:textColor="@drawable/custom_text_radio"
-            android:textSize="17dp"
-            app:layout_constraintStart_toEndOf="@+id/radioButton"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup"
+            tools:layout_editor_absoluteY="50dp"
             tools:listitem="@layout/item_keyword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
