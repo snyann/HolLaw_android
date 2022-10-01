@@ -1,6 +1,8 @@
 package com.example.community.Activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import com.example.RV.PostInfo
@@ -99,6 +101,12 @@ class WritingActivity : AppCompatActivity() {
 
         ref.child(uid).push().setValue(postInfo)
 
+        val intent = Intent(this, CommunityActivity::class.java)
+        startActivity(intent)
+        Toast.makeText(this, "게시물 작성 완료", Toast.LENGTH_SHORT)
+            .show()
+    }
+
     }
 
 
@@ -140,6 +148,6 @@ class WritingActivity : AppCompatActivity() {
        )
         ref.updateChildren(childUpdates)
        }*/
-    }
+
 
 
