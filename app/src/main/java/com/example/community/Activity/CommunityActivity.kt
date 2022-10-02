@@ -20,13 +20,18 @@ class CommunityActivity : AppCompatActivity() {
     lateinit var binding: ActivityCommunityBinding
     //private var itemList = arrayListOf<CommunityList>() //리스트 아이템 배열
     private lateinit var fbdb:FirebaseDatabase
-    private lateinit var ref : DatabaseReference
+    private lateinit var ref : DatabaseReference //파이어베이스 접근 객체 생성
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityCommunityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val adapter = CommunityAdapter(list)
+
+        binding!!.recyclerView2?.adapter = adapter
+        val list = ArrayList<PostInfo>()
 
         //게시물 작성으로 이동
         binding.ibWriting.setOnClickListener{
@@ -35,15 +40,15 @@ class CommunityActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-        fbdb = FirebaseDatabase.getInstance()
-        fbAuth = FirebaseAuth.getInstance()
-
-        //리스트 업데이트
-        val adapter = CommunityAdapter(CommunityList.communityList)
-        binding!!.recyclerView2?.adapter = adapter
-
         /*
+          ref.child("uid").child("postinfo").get().addOnSuccessListener {
+            postinfo = Integer.parseInt(it.value as String)
+        }.addOnFailureListener {
+
+        }
+
+          //리스트 업데이트
+
         .getReference().child("uid")
         fbdb.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(dataSnapshot: DatabaseError) {
@@ -58,19 +63,26 @@ class CommunityActivity : AppCompatActivity() {
 
             }
         })
-*/      adapter
+*/
+
+
         getPost()
 
     }
 
     private fun getPost() {
         fbdb=FirebaseDatabase.getInstance()
-        ref = fbdb.getReference("/uid/postinfo")
+       // ref = fbdb.getReference("/uid/postinfo")
+        val ref : DatabaseReference =fbdb.getReference("PostInfo")
 
-
-        ref.addValueEventListener(object:ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                TODO("Not yet implemented")
+        ref.addValueEventListener(object:ValueEventListener
+        {
+            override fun onDataChange(datasnapshot: DataSnapshot) {
+                for(data in datasnapshot.children){
+                    val postResult = data.getValue(PostInfo::class.java)
+                    postResult?: return
+                }
+                adapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -78,10 +90,7 @@ class CommunityActivity : AppCompatActivity() {
             }
         })
 
-        val childEventListener = object : ChildEventListener()
-        ref.addChildEventListener(childEventListener)
-
-
     }
+
 
 }

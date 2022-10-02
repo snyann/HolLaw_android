@@ -85,7 +85,8 @@ class WritingActivity : AppCompatActivity() {
         title: String, content: String
     ) {
         val fbdb=FirebaseDatabase.getInstance()
-        val ref = fbdb.getReference()
+        val ref : DatabaseReference =fbdb.getReference("PostInfo")
+
 
         //라디오버튼 분야 별로 경로 저장
         when(category){
@@ -99,7 +100,7 @@ class WritingActivity : AppCompatActivity() {
             content
         )
 
-        ref.child(uid).push().setValue(postInfo)
+        ref.child(uid.toString()).push().setValue(postInfo)
 
         val intent = Intent(this, CommunityActivity::class.java)
         startActivity(intent)
