@@ -1,6 +1,6 @@
 package com.example.community.Activity
 
-import android.app.Activity
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -8,12 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.RV.PostInfo
 import com.example.community.databinding.ActivityWritingBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.UserInfo
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-import com.google.firebase.ktx.Firebase
+
 
 class WritingActivity : AppCompatActivity() {
     private lateinit var fbAuth: FirebaseAuth
