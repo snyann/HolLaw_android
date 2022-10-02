@@ -7,21 +7,36 @@
     android:background="#FFFFFF"
     tools:context=".Activity.MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginBottom="158dp"
+        android:src="@drawable/judge"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mypage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
+        android:fontFamily="@font/text1_b"
         android:text="홀로서다"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
- />
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/text1_b"
         android:text="홀로:HolLaw"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -29,8 +44,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_mypage"
@@ -53,8 +67,7 @@
         android:layout_marginEnd="222dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
         app:layout_constraintEnd_toStartOf="@+id/btn_search"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
-     >
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9">
 
         <ImageButton
             android:id="@+id/btn_filter"
@@ -67,7 +80,9 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nanum_extrabb"
+            android:gravity="center"
             android:text="상세검색" />
 
     </LinearLayout>
@@ -92,11 +107,11 @@
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:background="@color/white"
-        app:srcCompat="@drawable/ic_search_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName9"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9"
-         />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_search_black_24dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -105,7 +120,7 @@
         android:background="@drawable/layer_stroke"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <View
@@ -123,7 +138,7 @@
 
         <ImageButton
             android:id="@+id/btn_update"
-            android:layout_width="30dp"
+            android:layout_width="25dp"
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
@@ -137,6 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="새로고침"
             app:layout_constraintBottom_toBottomOf="@id/btn_update"
             app:layout_constraintStart_toEndOf="@+id/btn_update"
@@ -148,6 +164,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="상가건물 임대차 보호법"
             app:layout_constraintStart_toStartOf="@id/view3"
             app:layout_constraintTop_toBottomOf="@+id/btn_update" />
@@ -160,6 +177,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="근로기준"
             app:layout_constraintStart_toStartOf="@id/view3"
             app:layout_constraintTop_toBottomOf="@id/update_text1" />
@@ -170,6 +188,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="고용보험"
             app:layout_constraintStart_toStartOf="@id/view3"
             app:layout_constraintTop_toBottomOf="@id/update_text2" />
@@ -181,6 +200,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/custom_btn_y"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="부동산"
             app:layout_constraintEnd_toStartOf="@+id/btn_work"
             app:layout_constraintHorizontal_bias="1.0"
@@ -193,6 +213,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/custom_btn_y"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="근로노동"
             app:layout_constraintEnd_toStartOf="@id/btn_traffic"
             app:layout_constraintStart_toEndOf="@id/btn_asset"
@@ -205,6 +226,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="50dp"
             android:background="@drawable/custom_btn_y"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="교통/운전"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btn_work"
@@ -218,6 +240,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="70dp"
             android:background="@drawable/custom_btn_y"
+            android:fontFamily="@font/nanum_extrabb"
             android:text="커뮤니티"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -242,9 +265,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="67dp"
+        android:fontFamily="@font/nanum_extrabb"
         android:text="우회전"
-        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
@@ -255,8 +277,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="67dp"
+        android:fontFamily="@font/nanum_extrabb"
         android:text="육아휴직"
-        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
         app:layout_constraintStart_toEndOf="@id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
@@ -268,8 +290,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
 
+        android:fontFamily="@font/nanum_extrabb"
         android:text="임대차"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />

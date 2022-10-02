@@ -24,6 +24,7 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFC107"
         android:text="완료"
+        android:fontFamily="@font/nanum_extrabb"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,6 +39,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="제목"
+        android:fontFamily="@font/nanum_extrabb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,21 +62,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="부동산/임대차" />
+            android:text="부동산/임대차"
+            android:fontFamily="@font/nanum_extrabb"/>
 
         <RadioButton
             android:id="@+id/rb_work"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="근로/노동" />
+            android:text="근로/노동"
+            android:fontFamily="@font/nanum_extrabb"/>
 
         <RadioButton
             android:id="@+id/rb_traffic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="교통/운전" />
+            android:text="교통/운전"
+            android:fontFamily="@font/nanum_extrabb"/>
     </RadioGroup>
 
     <EditText
@@ -88,6 +93,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="내용을 입력해주세요"
+        android:fontFamily="@font/nanum_regular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -115,6 +121,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="이미지 첨부"
+        android:fontFamily="@font/nanum_regular"
         android:textIsSelectable="false"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

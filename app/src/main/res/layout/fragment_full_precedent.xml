@@ -38,6 +38,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="12dp"
         android:text="판례전문"
+        android:fontFamily="@font/nanum_extrabb"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,6 +60,7 @@
             android:layout_marginLeft="8dp"
             android:background="#DDDDDD"
             android:text="대법원 2012. 4. 12. 선고 2011도9821 판결"
+            android:fontFamily="@font/nanum_regular"
             android:textSize="17dp"
             android:textStyle="bold"></TextView>
 

@@ -33,10 +33,10 @@
         android:id="@+id/text_Lhead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="법률전문"
+        android:fontFamily="@font/nanum_extrabb"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,6 +59,7 @@
             android:layout_marginLeft="8dp"
             android:background="#DDDDDD"
             android:text="title"
+            android:fontFamily="@font/nanum_extrabb"
             android:textSize="17dp"
             android:textStyle="bold"></TextView>
 
@@ -69,6 +70,7 @@
             android:layout_marginLeft="8dp"
             android:background="#DDDDDD"
             android:text="content"
+            android:fontFamily="@font/nanum_regular"
             android:textSize="15dp"></TextView>
 
     </LinearLayout>

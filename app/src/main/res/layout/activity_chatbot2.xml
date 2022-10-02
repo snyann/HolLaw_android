@@ -13,6 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="홀로:HolLaw 챗봇"
+        android:fontFamily="@font/text1_b"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +37,7 @@
             android:inputType="textPersonName"
             android:padding="10dp"
             android:hint="Enter your message"
+            android:fontFamily="@font/nanum_regular"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_send"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,15 +47,15 @@
             android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:backgroundTint="#FFC107"
+            android:fontFamily="@font/nanum_extrabb"
+            android:padding="10dp"
+            android:text="전송"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="전송"
-            android:textColor="#000000"
-            tools:layout_editor_absoluteX="307dp"
-            tools:layout_editor_absoluteY="499dp" />
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
