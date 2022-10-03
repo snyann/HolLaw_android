@@ -2,19 +2,23 @@ package com.example.community.Activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.TextKeyListener.clear
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.RV.PostInfo
 import com.example.adapters.CommunityAdapter
 import com.example.community.databinding.ActivityCommunityBinding
 import com.example.models.CommunityList
+import com.example.models.CommunityList.communityList
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import io.opencensus.tags.unsafe.ContextUtils.getValue
 
 class CommunityActivity : AppCompatActivity() {
 
     private lateinit var fbAuth: FirebaseAuth
     lateinit var binding: ActivityCommunityBinding
-    //private var itemList = arrayListOf<CommunityList>() //리스트 아이템 배열
+    private var itemList = ArrayList<String>() //리스트 아이템 배열
     private lateinit var fbdb:FirebaseDatabase
 
 
@@ -34,22 +38,25 @@ class CommunityActivity : AppCompatActivity() {
         val ref : DatabaseReference =fbdb.getReference("PostInfo")
 
         //리스트 업데이트
-        val adapter = CommunityAdapter(CommunityList.communityList)
-        binding!!.recyclerView2?.adapter = adapter
+        val adapter = CommunityAdapter(this,itemList)
+
 
         ref.addValueEventListener(object : ValueEventListener{
+
             override fun onCancelled(dataSnapshot: DatabaseError) {
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for(data in dataSnapshot.children){
+                itemList.clear()
+                for(snapshotChild in dataSnapshot.children){
+                    val postResult = snapshotChild.getValue(PostInfo::class.java)
 
-                    val postResult = data.getValue(PostInfo::class.java)
-                    postResult?: return
                 }
                 adapter.notifyDataSetChanged()
             }
         })
+
+        binding!!.recyclerView2?.adapter = adapter
 
 
 
