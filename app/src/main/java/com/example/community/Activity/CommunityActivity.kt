@@ -18,8 +18,9 @@ class CommunityActivity : AppCompatActivity() {
 
     private lateinit var fbAuth: FirebaseAuth
     lateinit var binding: ActivityCommunityBinding
-    private var itemList = ArrayList<String>() //리스트 아이템 배열
+    private var itemList = arrayListOf<PostInfo>()//리스트 아이템 배열
     private lateinit var fbdb:FirebaseDatabase
+    private var adapter = CommunityAdapter(itemList)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,25 +33,30 @@ class CommunityActivity : AppCompatActivity() {
             val intent = Intent(this, WritingActivity::class.java)
             startActivity(intent)
         }
+        itemList.clear()
+        adapter.notifyDataSetChanged()
 
 
         fbdb = FirebaseDatabase.getInstance()
         val ref : DatabaseReference =fbdb.getReference("PostInfo")
 
         //리스트 업데이트
-        val adapter = CommunityAdapter(this,itemList)
-
 
         ref.addValueEventListener(object : ValueEventListener{
 
             override fun onCancelled(dataSnapshot: DatabaseError) {
             }
 
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
+            override fun onDataChange(Snapshot: DataSnapshot) {
                 itemList.clear()
-                for(snapshotChild in dataSnapshot.children){
-                    val postResult = snapshotChild.getValue(PostInfo::class.java)
+                for(shot in Snapshot.children){
+                    val data_title = shot.value.toString()
+                    val data_content = shot.value.toString()
+                    val title = data_title
+                    val content = data_content
+                    val C = PostInfo(title,content)
 
+                    itemList.add(C)
                 }
                 adapter.notifyDataSetChanged()
             }

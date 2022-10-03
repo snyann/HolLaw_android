@@ -86,7 +86,7 @@ class WritingActivity : AppCompatActivity() {
     ) {
         val fbdb=FirebaseDatabase.getInstance()
         val ref : DatabaseReference =fbdb.getReference("PostInfo")
-
+        ref.child(title).setValue(content)
 
         //라디오버튼 분야 별로 경로 저장
         when(category){
