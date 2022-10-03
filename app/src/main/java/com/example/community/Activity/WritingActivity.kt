@@ -90,9 +90,9 @@ class WritingActivity : AppCompatActivity() {
 
         //라디오버튼 분야 별로 경로 저장
         when(category){
-            "근로"-> fbdb.getReference("/uid/postinfo/근로")
-            "교통" -> fbdb.getReference("/uid/postinfo/교통")
-            "부동산"-> fbdb.getReference("/uid/postinfo/부동산")
+            "근로"-> fbdb.getReference("PostInfo/근로")
+            "교통" -> fbdb.getReference("PostInfo/교통")
+            "부동산"-> fbdb.getReference("PostInfo/부동산")
         }
 
         val postInfo = PostInfo(
