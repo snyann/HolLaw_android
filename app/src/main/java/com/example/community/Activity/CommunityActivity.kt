@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.RV.PostInfo
 import com.example.adapters.CommunityAdapter
 import com.example.community.databinding.ActivityCommunityBinding
+import com.example.community.databinding.ActivityResultBinding
 import com.example.models.CommunityList
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -23,6 +24,9 @@ class CommunityActivity : AppCompatActivity() {
 
         binding = ActivityCommunityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //리스트 업데이트
+        val adapter = CommunityAdapter(CommunityList.communityList)
+        binding?.recyclerView2?.adapter = adapter
 
         binding.ibWriting.setOnClickListener{
             val intent = Intent(this, WritingActivity::class.java)
@@ -34,9 +38,6 @@ class CommunityActivity : AppCompatActivity() {
         fbdb = FirebaseDatabase.getInstance().getReference().child("uid")
         fbAuth = FirebaseAuth.getInstance()
 
-        //리스트 업데이트
-        val adapter = CommunityAdapter(CommunityList.communityList)
-        binding!!.recyclerView2?.adapter = adapter
 
         fbdb.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(dataSnapshot: DatabaseError) {

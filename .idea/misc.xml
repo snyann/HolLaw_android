@@ -83,9 +83,10 @@
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/drawable/round_background.xml" value="0.244" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_chatbot.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_chatbot2.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_community.xml" value="0.28894927536231885" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_result.xml" value="0.25" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_result.xml" value="0.33" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/activity_result_law.xml" value="0.25" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/actvity_keyword.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/adapter_message_one.xml" value="0.36614583333333334" />
@@ -100,7 +101,7 @@
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_comment.xml" value="0.25" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_community_content_list.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_content.xml" value="0.17806484295845998" />
-        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_keyword.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/layout/item_keyword.xml" value="0.33" />
         <entry key="..\:/Users/cns/AndroidStudioProjects/HolLaw_android/app/src/main/res/mipmap-anydpi-v26/ic_user.xml" value="0.1955" />
       </map>
     </option>

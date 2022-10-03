@@ -56,6 +56,9 @@
         <activity
             android:name=".Activity.FullPrecedentActivity"
             android:label="판례전문" />
+        <activity
+            android:name=".Activity.TransitFieldActivity"
+            android:label="교통/운전" />
     </application>
 
 </manifest>

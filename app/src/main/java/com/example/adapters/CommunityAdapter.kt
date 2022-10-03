@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.RV.PostInfo
 import com.example.community.databinding.ItemContentBinding
+import java.util.logging.Filter
 
 class CommunityAdapter(val communityList: List<PostInfo>):RecyclerView.Adapter<CommunityAdapter.CommunityViewHolder>() {
     inner class CommunityViewHolder(val itemBinding: ItemContentBinding)
@@ -27,4 +28,5 @@ class CommunityAdapter(val communityList: List<PostInfo>):RecyclerView.Adapter<C
     override fun getItemCount(): Int {
         return communityList.size
     }
+
 }
