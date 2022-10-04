@@ -32,7 +32,7 @@ class WritingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // firebaseAuth = FirebaseAuth.getInstance() //로그인 정보 가져와야함
-        if (intent.hasExtra("uid")) {
+       if (intent.hasExtra("uid")) {
             uid = intent.getStringExtra("uid").toString()
         }
 
@@ -86,22 +86,23 @@ class WritingActivity : AppCompatActivity() {
     ) {
         val fbdb=FirebaseDatabase.getInstance()
         val ref : DatabaseReference =fbdb.getReference("PostInfo")
-        ref.child(title).setValue(content)
+    //    ref.child(title).setValue(content)
 
         //라디오버튼 분야 별로 경로 저장
-        when(category){
+      /*  when(category){
             "근로"-> fbdb.getReference("PostInfo/근로")
             "교통" -> fbdb.getReference("PostInfo/교통")
             "부동산"-> fbdb.getReference("PostInfo/부동산")
         }
-
+*/
         val postInfo = PostInfo(
             title ,
             content
         )
 
-        ref.child(uid.toString()).push().setValue(postInfo)
 
+      ref.child(uid.toString()).push().setValue(postInfo)
+      //  ref.updateChildren(childUpdates)
         val intent = Intent(this, CommunityActivity::class.java)
         startActivity(intent)
         Toast.makeText(this, "게시물 작성 완료", Toast.LENGTH_SHORT)

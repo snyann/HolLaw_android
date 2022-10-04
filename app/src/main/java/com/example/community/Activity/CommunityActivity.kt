@@ -50,7 +50,7 @@ class CommunityActivity : AppCompatActivity() {
             override fun onDataChange(Snapshot: DataSnapshot) {
                 itemList.clear()
                 for(shot in Snapshot.children){
-                    val data_title = shot.value.toString()
+                    val data_title = shot.key.toString()
                     val data_content = shot.value.toString()
                     val title = data_title
                     val content = data_content
