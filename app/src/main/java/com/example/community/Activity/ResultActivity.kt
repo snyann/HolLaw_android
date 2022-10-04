@@ -1,6 +1,7 @@
 package com.example.community.Activity
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.adapters.LawAdapter
 import com.example.adapters.PrecedentAdapter
@@ -12,6 +13,7 @@ import com.example.models.PrecedentList
 class ResultActivity : AppCompatActivity() {
 
     var binding: ActivityResultBinding? = null
+    //var count = findViewById<TextView>(R.id.textView10)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

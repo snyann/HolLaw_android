@@ -9,7 +9,7 @@ import com.example.RV.Data
 import com.example.community.Activity.FullPrecedentActivity
 import com.example.community.databinding.ItemKeywordBinding
 
-class PrecedentAdapter(val PrecendentList: List<Data>):RecyclerView.Adapter<PrecedentAdapter. PrecendentViewHolder>() {
+class PrecedentAdapter(val PrecendentList: List<Data>):RecyclerView.Adapter<PrecedentAdapter.PrecendentViewHolder>() {
     inner class  PrecendentViewHolder(val itemBinding: ItemKeywordBinding)
         : RecyclerView.ViewHolder(itemBinding.root){
             fun bindItem(data: Data){

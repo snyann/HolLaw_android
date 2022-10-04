@@ -58,18 +58,19 @@
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:background="#DDDDDD"
-            android:text="대법원 2012. 4. 12. 선고 2011도9821 판결"
+            android:background="@color/light_gray"
+            android:text="[교통사고처리특례법위반]\n[대법원 1992.01.21 선고 91도 2330 판결]"
             android:fontFamily="@font/nanum_regular"
             android:textSize="17dp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"
+            android:lineSpacingExtra = "5dp"></TextView>
 
         <TextView
             android:id="@+id/fullText"
             android:layout_width="380dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="8dp"
-            android:background="#DDDDDD"
+            android:background="@color/light_gray"
             android:textSize="15dp"
             android:scrollbars="vertical"></TextView>
 

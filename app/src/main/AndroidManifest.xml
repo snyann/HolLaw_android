@@ -59,6 +59,9 @@
         <activity
             android:name=".Activity.TransitFieldActivity"
             android:label="교통/운전" />
+        <activity
+            android:name=".Activity.FragmentCommunityContentActivity"
+            android:label="커뮤니티" />
     </application>
 
 </manifest>
