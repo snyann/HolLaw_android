@@ -86,7 +86,7 @@ class WritingActivity : AppCompatActivity() {
     ) {
         val fbdb=FirebaseDatabase.getInstance()
         val ref : DatabaseReference =fbdb.getReference("PostInfo")
-    //    ref.child(title).setValue(content)
+    ref.child(title).setValue(content)
 
         //라디오버튼 분야 별로 경로 저장
       /*  when(category){
@@ -100,9 +100,10 @@ class WritingActivity : AppCompatActivity() {
             content
         )
 
-
-      ref.child(uid.toString()).push().setValue(postInfo)
+        //ref.child("PostInfo").push().setValue(postInfo)
+      //ref.child(uid.toString()).push().setValue(postInfo)
       //  ref.updateChildren(childUpdates)
+
         val intent = Intent(this, CommunityActivity::class.java)
         startActivity(intent)
         Toast.makeText(this, "게시물 작성 완료", Toast.LENGTH_SHORT)

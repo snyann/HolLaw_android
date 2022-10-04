@@ -7,6 +7,9 @@ object CommunityList {
         PostInfo(title = "", content = ""),
         PostInfo(title = "", content = ""),
         PostInfo(title = "", content = ""),
+        PostInfo(title = "", content = ""),
+        PostInfo(title = "", content = ""),
+        PostInfo(title = "", content = ""),
         PostInfo(title = "", content = "")
          //CData(title = "안녕하세요", content = "반갑습니다"),
         //Data(title = "도와주세요", content = "help me"),
