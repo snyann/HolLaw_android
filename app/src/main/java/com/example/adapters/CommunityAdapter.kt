@@ -6,7 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.RV.PostInfo
 import com.example.community.databinding.ItemContentBinding
 
-class CommunityAdapter(val communityList: List<PostInfo>):RecyclerView.Adapter<CommunityAdapter.CommunityViewHolder>() {
+
+class CommunityAdapter(
+    val communityList: MutableList<PostInfo>
+):RecyclerView.Adapter<CommunityAdapter.CommunityViewHolder>() {
+
     inner class CommunityViewHolder(val itemBinding: ItemContentBinding)
         : RecyclerView.ViewHolder(itemBinding.root) {
             fun bindItem(data: PostInfo){
@@ -27,4 +31,8 @@ class CommunityAdapter(val communityList: List<PostInfo>):RecyclerView.Adapter<C
     override fun getItemCount(): Int {
         return communityList.size
     }
+    fun clearpost(){
+        communityList.clear()
+    }
+
 }
