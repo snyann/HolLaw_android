@@ -16,7 +16,6 @@ import io.opencensus.tags.unsafe.ContextUtils.getValue
 
 class CommunityActivity : AppCompatActivity() {
 
-    private lateinit var fbAuth: FirebaseAuth
     lateinit var binding: ActivityCommunityBinding
     private var itemList = arrayListOf<PostInfo>()//리스트 아이템 배열
     private lateinit var fbdb:FirebaseDatabase
@@ -33,17 +32,16 @@ class CommunityActivity : AppCompatActivity() {
             val intent = Intent(this, WritingActivity::class.java)
             startActivity(intent)
         }
-        itemList.clear()
-        adapter.notifyDataSetChanged()
+
+        itemList.clear() //리스트 초기화
+        adapter.notifyDataSetChanged() //변경시 업데이드
 
 
         fbdb = FirebaseDatabase.getInstance()
         val ref : DatabaseReference =fbdb.getReference("PostInfo")
 
-        //리스트 업데이트
 
         ref.addValueEventListener(object : ValueEventListener{
-
             override fun onCancelled(dataSnapshot: DatabaseError) {
             }
 
@@ -61,66 +59,7 @@ class CommunityActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
         })
-
         binding!!.recyclerView2?.adapter = adapter
 
-
-
-
     }
-
 }
-        /*
-          ref.child("uid").child("postinfo").get().addOnSuccessListener {
-            postinfo = Integer.parseInt(it.value as String)
-        }.addOnFailureListener {
-
-        }
-
-          //리스트 업데이트
-
-        .getReference().child("uid")
-        fbdb.addValueEventListener(object : ValueEventListener{
-            override fun onCancelled(dataSnapshot: DatabaseError) {
-            }
-
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-            for(data in dataSnapshot.children){
-
-                val postResult = data.getValue(PostInfo::class.java)
-                postResult?: return
-            }
-
-            }
-        })
-
-
-
-        getPost()
-
-    }
-
-    private fun getPost() {
-        fbdb=FirebaseDatabase.getInstance()
-       // ref = fbdb.getReference("/uid/postinfo")
-        val ref : DatabaseReference =fbdb.getReference("PostInfo")
-
-        ref.addValueEventListener(object:ValueEventListener
-        {
-            override fun onDataChange(datasnapshot: DataSnapshot) {
-                for(data in datasnapshot.children){
-                    val postResult = data.getValue(PostInfo::class.java)
-                    postResult?: return
-                }
-                adapter.notifyDataSetChanged()
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
-
-    }
-
-
-}*/
