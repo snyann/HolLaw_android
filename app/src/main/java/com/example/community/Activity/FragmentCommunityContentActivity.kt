@@ -29,6 +29,8 @@ class FragmentCommunityContentActivity: AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
         val imageButton2 = findViewById<ImageButton>(R.id.imageButton2)
         imageButton2.setOnClickListener{
             addComment()
