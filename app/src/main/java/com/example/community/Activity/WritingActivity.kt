@@ -86,15 +86,14 @@ class WritingActivity : AppCompatActivity() {
     ) {
         val fbdb=FirebaseDatabase.getInstance()
         val ref : DatabaseReference =fbdb.getReference("PostInfo")
-    ref.child(title).setValue(content)
+        ref.child(title).setValue(content)
 
-        //라디오버튼 분야 별로 경로 저장
+      //라디오버튼 분야 별로 경로 저장
       /*  when(category){
             "근로"-> fbdb.getReference("PostInfo/근로")
             "교통" -> fbdb.getReference("PostInfo/교통")
             "부동산"-> fbdb.getReference("PostInfo/부동산")
-        }
-*/
+        } */
         val postInfo = PostInfo(
             title ,
             content
