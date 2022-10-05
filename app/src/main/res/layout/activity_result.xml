@@ -133,7 +133,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="0dp"
         android:fontFamily="@font/nanum_extrabb"
-        android:text="검색결과"
+        android:text="검색결과 "
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
