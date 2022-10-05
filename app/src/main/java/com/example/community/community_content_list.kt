@@ -3,9 +3,8 @@ package com.example.community
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
-import com.example.community.R
 import android.widget.ImageButton
-import com.google.firebase.auth.FirebaseAuth
+//import com.google.firebase.auth.FirebaseAuth
 
 class community_content_list : Activity() {
 
